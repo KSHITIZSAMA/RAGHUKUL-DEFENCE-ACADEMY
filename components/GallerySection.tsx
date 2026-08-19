@@ -15,11 +15,11 @@ interface GalleryItem {
 const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: "g1",
-    caption: "Army & Defence Entrance Training Cadets Physical Drill Assembly",
+    caption: "Youth Defence Uniform Cadets Certificate & Medal Honor Ceremony (Matru Bhumi Seva Samman)",
     category: "Army Training",
     src: "/images/gallery-army.png",
-    batchDate: "BATCH 2026 // DEFENCE DRILL ASSEMBLY",
-    location: "RDA Betul Ground Stadium & Pavilion",
+    batchDate: "HONORS 2026 // MATRU BHUMI SEVA SAMMAN",
+    location: "RDA Betul Training & Honor Center",
   },
   {
     id: "g2",
