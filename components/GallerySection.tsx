@@ -15,11 +15,11 @@ interface GalleryItem {
 const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: "g1",
-    caption: "Morning 1.6km Endurance Speed Run",
+    caption: "Army & Defence Entrance Training Cadets Physical Drill Assembly",
     category: "Army Training",
     src: "/images/gallery-army.png",
-    batchDate: "BATCH 2026 // DRILL 04",
-    location: "Academy Training Ground, Lucknow",
+    batchDate: "BATCH 2026 // DEFENCE DRILL ASSEMBLY",
+    location: "RDA Betul Ground Stadium & Pavilion",
   },
   {
     id: "g2",
