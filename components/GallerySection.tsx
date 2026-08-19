@@ -39,11 +39,11 @@ const GALLERY_ITEMS: GalleryItem[] = [
   },
   {
     id: "g4",
-    caption: "Obstacle Course & Push-up Drill Session",
+    caption: "Army Cadets Track Briefing & Physical Obstacle Drill Training",
     category: "Army Training",
-    src: "/images/hero-cadet.png",
-    batchDate: "BATCH 2026 // DRILL 01",
-    location: "Obstacle Ground, Lucknow",
+    src: "/images/gallery-army-obstacle.jpg",
+    batchDate: "BATCH 2026 // DRILL 01 BRIEFING",
+    location: "RDA Track & Field Drill Ground, Betul",
   },
   {
     id: "g5",
