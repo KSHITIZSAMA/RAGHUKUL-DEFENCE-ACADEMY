@@ -47,11 +47,11 @@ const GALLERY_ITEMS: GalleryItem[] = [
   },
   {
     id: "g5",
-    caption: "Women Self-Reliance & Athletic Achievement Awards",
+    caption: "Youth Tree Plantation Drive & Environmental Awareness Activity",
     category: "Women Empowerment",
-    src: "/images/gallery-women.png",
-    batchDate: "BATCH 2026 // SKILL 01",
-    location: "RDA Betul Event Center",
+    src: "/images/gallery-plantation.jpg",
+    batchDate: "DRIVE 2026 // TREE PLANTATION",
+    location: "District Sweep Complex Grounds, Betul",
   },
   {
     id: "g6",
