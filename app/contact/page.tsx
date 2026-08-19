@@ -67,8 +67,8 @@ export default function ContactPage() {
           <h2 className="text-2xl mb-4">Reach us directly</h2>
           <ul className="space-y-3 text-ink/80 mb-8">
             <li>📍 Lucknow, Uttar Pradesh</li>
-            <li>📞 +91 81156 26005 (Call / WhatsApp)</li>
-            <li>✉️ info@raghukuldefence.org</li>
+            <li>📞 +91 97976 33077 (Call / WhatsApp)</li>
+            <li>✉️ raghuwanshiashok34@gmail.com</li>
           </ul>
           {/* GOOGLE MAP LOCATION — replace the src with the client's real
               Google Maps embed link once they share their exact address. */}

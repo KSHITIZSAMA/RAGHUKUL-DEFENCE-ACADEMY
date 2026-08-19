@@ -615,8 +615,8 @@ export default function Home() {
                 <h3 className="text-lg font-bold uppercase font-mono mb-3 text-[#C98E2A]">HEADQUARTERS CONTACT</h3>
                 <ul className="space-y-2.5 font-mono text-xs text-[#CFD3C7]">
                   <li>📍 LUCKNOW, UTTAR PRADESH, INDIA</li>
-                  <li>📞 +91 81156 26005 (CALL / WHATSAPP)</li>
-                  <li>✉️ INFO@RAGHUKULDEFENCE.ORG</li>
+                  <li>📞 +91 97976 33077 (CALL / WHATSAPP)</li>
+                  <li>✉️ RAGHUWANSHIASHOK34@GMAIL.COM</li>
                   <li>⏰ 05:30 AM - 07:00 PM IST</li>
                 </ul>
               </div>

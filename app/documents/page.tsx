@@ -221,7 +221,7 @@ export default function DocumentsPage() {
               Contact Admin Office
             </Link>
             <a
-              href="mailto:raghukuldefence@gmail.com"
+              href="mailto:raghuwanshiashok34@gmail.com"
               className="px-6 py-3 rounded-full bg-[#161912] border border-[#586248] text-white font-mono text-xs uppercase tracking-widest hover:border-[#C98E2A] transition-colors"
             >
               Email Compliance Desk
