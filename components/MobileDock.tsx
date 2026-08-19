@@ -4,27 +4,27 @@ import Link from "next/link";
 
 export default function MobileDock() {
   return (
-    <div className="lg:hidden fixed bottom-0 inset-x-0 z-40 bg-[#181B15]/95 backdrop-blur-md border-t-2 border-[#3F4632] px-3 py-2.5 shadow-2xl">
+    <div className="lg:hidden fixed bottom-0 inset-x-0 z-40 bg-[#0D223A]/95 backdrop-blur-md border-t-2 border-[#163B66] px-3 py-2.5 shadow-2xl">
       <div className="flex items-center justify-between gap-2 text-center font-mono text-[11px] uppercase tracking-wider font-bold">
         <a
           href="tel:+919797633077"
-          className="flex-1 py-2.5 bg-[#3F4632] text-white hover:bg-[#1E2318] transition-colors tactical-cut-br border border-[#586248] flex items-center justify-center gap-1.5"
+          className="flex-1 py-2.5 bg-[#163B66] text-white hover:bg-[#0D223A] transition-colors rounded-xl border border-[#205493] flex items-center justify-center gap-1.5"
         >
           <span>📞</span>
-          <span>CALL</span>
+          <span>CALL NGO</span>
         </a>
         <Link
           href="/membership"
-          className="flex-1 py-2.5 bg-[#C98E2A] text-[#181B15] hover:bg-white transition-colors tactical-cut-br flex items-center justify-center gap-1.5 shadow-md"
+          className="flex-1 py-2.5 bg-[#D97706] text-white hover:bg-[#B45309] transition-colors rounded-xl flex items-center justify-center gap-1.5 shadow-md"
         >
-          <span>🪖</span>
-          <span>JOIN CADET</span>
+          <span>🤝</span>
+          <span>JOIN CAUSE</span>
         </Link>
         <Link
           href="/#donors"
-          className="flex-1 py-2.5 bg-[#586248] text-white hover:bg-[#1E2318] transition-colors tactical-cut-br border border-[#738062] flex items-center justify-center gap-1.5"
+          className="flex-1 py-2.5 bg-[#10B981] text-white hover:bg-[#059669] transition-colors rounded-xl border border-[#34D399] flex items-center justify-center gap-1.5"
         >
-          <span>🤝</span>
+          <span>❤</span>
           <span>DONATE</span>
         </Link>
       </div>

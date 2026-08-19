@@ -333,15 +333,15 @@ export function CinematicFooter() {
 
           {/* 2. Main Center Content */}
           <div className="relative z-10 flex flex-1 flex-col items-center justify-center px-6 mt-20 sm:mt-24 w-full max-w-5xl mx-auto">
-            <div className="inline-block px-4 py-1 bg-[#3F4632] text-[#C98E2A] font-mono text-xs font-bold uppercase tracking-widest mb-3 tactical-cut-br border border-[#586248]">
-              // JOIN MERE VATAN FOUNDATION
+            <div className="inline-block px-4 py-1.5 bg-[#163B66] text-[#FF9933] font-mono text-xs font-bold uppercase tracking-widest mb-3 rounded-full border border-[#D97706]/40">
+              // MERE VATAN WELFARE FOUNDATION
             </div>
 
             <h2
               ref={headingRef}
               className="text-4xl md:text-7xl font-black footer-text-glow tracking-tight mb-10 text-center font-display uppercase leading-tight"
             >
-              READY TO SERVE & EXCEL?
+              SERVE. EMPOWER. TRANSFORM.
             </h2>
 
             {/* Interactive Magnetic Pills Layout */}
@@ -351,18 +351,18 @@ export function CinematicFooter() {
                 <MagneticButton
                   as={Link}
                   href="/membership"
-                  className="footer-glass-pill px-8 py-4 rounded-full text-white font-mono font-bold text-xs md:text-sm uppercase tracking-widest flex items-center gap-3 group border-[#C98E2A]/50 bg-[#3F4632]/40"
+                  className="footer-glass-pill px-8 py-4 rounded-full text-white font-mono font-bold text-xs md:text-sm uppercase tracking-widest flex items-center gap-3 group border-[#D97706]/60 bg-[#D97706]/20 hover:bg-[#D97706]"
                 >
-                  <span className="w-2.5 h-2.5 rounded-full bg-[#C98E2A] group-hover:scale-125 transition-transform" />
-                  BECOME A CADET
+                  <span className="w-2.5 h-2.5 rounded-full bg-[#FF9933] group-hover:scale-125 transition-transform" />
+                  JOIN AS VOLUNTEER
                 </MagneticButton>
 
                 <MagneticButton
                   as="button"
                   onClick={() => handleScrollTo("activities")}
-                  className="footer-glass-pill px-8 py-4 rounded-full text-white font-mono font-bold text-xs md:text-sm uppercase tracking-widest flex items-center gap-3 group border-[#586248]/50"
+                  className="footer-glass-pill px-8 py-4 rounded-full text-white font-mono font-bold text-xs md:text-sm uppercase tracking-widest flex items-center gap-3 group border-[#163B66]/80 bg-[#163B66]/40 hover:bg-[#163B66]"
                 >
-                  <span className="w-2.5 h-2.5 rounded-full bg-[#738062] group-hover:scale-125 transition-transform" />
+                  <span className="w-2.5 h-2.5 rounded-full bg-[#38BDF8] group-hover:scale-125 transition-transform" />
                   EXPLORE WINGS
                 </MagneticButton>
               </div>
@@ -374,9 +374,9 @@ export function CinematicFooter() {
                   href="https://instagram.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="footer-glass-pill px-5 py-2.5 rounded-full text-[#CFD3C7] font-mono text-xs hover:text-white uppercase tracking-wider flex items-center gap-2 border-[#586248]/40"
+                  className="footer-glass-pill px-5 py-2.5 rounded-full text-[#E2E8F0] font-mono text-xs hover:text-white uppercase tracking-wider flex items-center gap-2 border-[#163B66]/60"
                 >
-                  <span className="text-[#C98E2A]">📷</span>
+                  <span className="text-[#FF9933]">📷</span>
                   Instagram
                 </MagneticButton>
                 <MagneticButton
@@ -384,7 +384,7 @@ export function CinematicFooter() {
                   href="https://youtube.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="footer-glass-pill px-5 py-2.5 rounded-full text-[#CFD3C7] font-mono text-xs hover:text-white uppercase tracking-wider flex items-center gap-2 border-[#586248]/40"
+                  className="footer-glass-pill px-5 py-2.5 rounded-full text-[#E2E8F0] font-mono text-xs hover:text-white uppercase tracking-wider flex items-center gap-2 border-[#163B66]/60"
                 >
                   <span className="text-red-500">▶</span>
                   YouTube Channel
@@ -392,18 +392,18 @@ export function CinematicFooter() {
                 <MagneticButton
                   as={Link}
                   href="/documents"
-                  className="footer-glass-pill px-5 py-2.5 rounded-full text-[#CFD3C7] font-mono text-xs hover:text-white uppercase tracking-wider flex items-center gap-2 border-[#586248]/40"
+                  className="footer-glass-pill px-5 py-2.5 rounded-full text-[#E2E8F0] font-mono text-xs hover:text-white uppercase tracking-wider flex items-center gap-2 border-[#163B66]/60"
                 >
-                  <span className="text-[#C98E2A]">📜</span>
+                  <span className="text-[#FF9933]">📜</span>
                   NGO Documents
                 </MagneticButton>
                 <MagneticButton
                   as="button"
                   onClick={() => handleScrollTo("contact")}
-                  className="footer-glass-pill px-5 py-2.5 rounded-full text-[#CFD3C7] font-mono text-xs hover:text-white uppercase tracking-wider flex items-center gap-2 border-[#586248]/40"
+                  className="footer-glass-pill px-5 py-2.5 rounded-full text-[#E2E8F0] font-mono text-xs hover:text-white uppercase tracking-wider flex items-center gap-2 border-[#163B66]/60"
                 >
-                  <span className="text-[#C98E2A]">🎖️</span>
-                  Careers // Drill Instructors
+                  <span className="text-[#FF9933]">🎖️</span>
+                  Careers // Instructors
                 </MagneticButton>
               </div>
             </div>
@@ -413,22 +413,22 @@ export function CinematicFooter() {
           <div className="relative z-20 w-full pb-8 px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-6">
 
             {/* Copyright */}
-            <div className="text-[#CFD3C7] text-[10px] md:text-xs font-mono tracking-widest uppercase order-2 md:order-1">
+            <div className="text-[#E2E8F0] text-[10px] md:text-xs font-mono tracking-widest uppercase order-2 md:order-1">
               © 2026 MERE VATAN WELFARE FOUNDATION. ALL RIGHTS RESERVED.
             </div>
 
             {/* "Made with Love" Badge */}
-            <div className="footer-glass-pill px-6 py-2.5 rounded-full flex items-center gap-2 order-1 md:order-2 cursor-default border-[#3F4632]">
-              <span className="text-[#CFD3C7] text-[10px] md:text-xs font-mono font-bold uppercase tracking-widest">CRAFTED WITH</span>
-              <span className="animate-footer-heartbeat text-sm md:text-base text-[#C98E2A]">❤</span>
-              <span className="text-[#CFD3C7] text-[10px] md:text-xs font-mono font-bold uppercase tracking-widest">FOR YOUTH & DEFENCE ASPIRANTS</span>
+            <div className="footer-glass-pill px-6 py-2.5 rounded-full flex items-center gap-2 order-1 md:order-2 cursor-default border-[#163B66]">
+              <span className="text-[#E2E8F0] text-[10px] md:text-xs font-mono font-bold uppercase tracking-widest">CRAFTED WITH</span>
+              <span className="animate-footer-heartbeat text-sm md:text-base text-[#D97706]">❤</span>
+              <span className="text-[#E2E8F0] text-[10px] md:text-xs font-mono font-bold uppercase tracking-widest">FOR YOUTH & DEFENCE ASPIRANTS</span>
             </div>
 
             {/* Back to top */}
             <MagneticButton
               as="button"
               onClick={scrollToTop}
-              className="w-12 h-12 rounded-full footer-glass-pill flex items-center justify-center text-[#CFD3C7] hover:text-white group order-3 border-[#3F4632]"
+              className="w-12 h-12 rounded-full footer-glass-pill flex items-center justify-center text-[#E2E8F0] hover:text-white group order-3 border-[#163B66]"
               aria-label="Back to top"
             >
               <svg className="w-5 h-5 transform group-hover:-translate-y-1.5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">

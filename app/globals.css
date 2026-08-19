@@ -1,19 +1,19 @@
 @import "tailwindcss";
 
 :root {
-  --tactical-olive: #3F4632;
-  --tactical-olive-dark: #1E2318;
-  --tactical-olive-mid: #586248;
-  --tactical-olive-light: #738062;
-  --tactical-bg: #E5E7DF;
-  --tactical-bg-subtle: #DCDFD6;
-  --tactical-card: #F4F5F1;
-  --tactical-dark: #181B15;
-  --tactical-muted: #5E6553;
-  --tactical-badge: #CFD3C7;
-  --tactical-amber: #C98E2A;
-  --tactical-border: #BDC1B3;
-  --tactical-border-dark: #353C2B;
+  --tactical-olive: #163B66;
+  --tactical-olive-dark: #0A192F;
+  --tactical-olive-mid: #205493;
+  --tactical-olive-light: #2A69AC;
+  --tactical-bg: #F4F6F9;
+  --tactical-bg-subtle: #EAF0F6;
+  --tactical-card: #FFFFFF;
+  --tactical-dark: #0F172A;
+  --tactical-muted: #475569;
+  --tactical-badge: #E2E8F0;
+  --tactical-amber: #D97706;
+  --tactical-border: #CBD5E1;
+  --tactical-border-dark: #1E3A8A;
 
   --ink: var(--tactical-dark);
   --paper: var(--tactical-bg);
@@ -21,7 +21,7 @@
   --olive: var(--tactical-olive);
   --olive-2: var(--tactical-olive-mid);
   --amber: var(--tactical-amber);
-  --rust: var(--tactical-olive-mid);
+  --rust: var(--tactical-amber);
   --sage: var(--tactical-olive-light);
 
   --font-chakra: "Chakra Petch", "Rajdhani", sans-serif;
@@ -79,7 +79,7 @@ h1, h2, h3, h4, .display {
   letter-spacing: 0.04em;
 }
 
-/* Tactical Angle Cuts (Chamfered Corners) */
+/* Chamfered Corners */
 .tactical-cut-br {
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
 }
@@ -96,15 +96,7 @@ h1, h2, h3, h4, .display {
   clip-path: polygon(0 0, calc(100% - 24px) 0, 100% 24px, 100% 100%, 0 100%);
 }
 
-.tactical-slash-left {
-  clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
-}
-
-.tactical-slash-right {
-  clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
-}
-
-/* Hero Section "X" Shaped Image Frame (Matching MILIDECK Slide 1) */
+/* Hero Section "X" Shaped Image Frame */
 .hero-x-frame {
   clip-path: polygon(
     22% 0%, 
@@ -124,20 +116,22 @@ h1, h2, h3, h4, .display {
   );
 }
 
-/* Title Box Backdrop - MILIDECK Style */
+/* Title Box Backdrop - Warm NGO Style */
 .milideck-title-box {
-  background-color: #CFD3C7;
-  border: 1px solid #BDC1B3;
+  background-color: #FFFFFF;
+  border: 2px solid #163B66;
+  border-left: 6px solid #D97706;
   padding: 0.35rem 1.25rem;
   display: inline-block;
-  box-shadow: 2px 2px 0px rgba(24, 27, 21, 0.1);
+  box-shadow: 4px 4px 0px rgba(22, 59, 102, 0.15);
+  border-radius: 4px;
 }
 
 /* Technical Grid Pattern Overlay */
 .tech-grid-pattern {
   background-image: 
-    linear-gradient(to right, rgba(59, 66, 46, 0.07) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(59, 66, 46, 0.07) 1px, transparent 1px);
+    linear-gradient(to right, rgba(22, 59, 102, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(22, 59, 102, 0.05) 1px, transparent 1px);
   background-size: 24px 24px;
 }
 
@@ -148,28 +142,28 @@ h1, h2, h3, h4, .display {
   background-size: 24px 24px;
 }
 
-/* Signature Military Tri-Band Line */
+/* Signature NGO Tri-Band Line (Saffron - Navy - Emerald) */
 .tri-band {
   display: flex;
   height: 4px;
   width: 100%;
 }
 .tri-band > span { flex: 1; }
-.tri-band > span:nth-child(1) { background: #3B422E; }
-.tri-band > span:nth-child(2) { background: #6D7B58; }
-.tri-band > span:nth-child(3) { background: #C98E2A; }
+.tri-band > span:nth-child(1) { background: #FF9933; }
+.tri-band > span:nth-child(2) { background: #163B66; }
+.tri-band > span:nth-child(3) { background: #138808; }
 
 ::selection {
-  background: #3B422E;
+  background: #163B66;
   color: #FFFFFF;
 }
 
 :focus-visible {
-  outline: 2px solid #3B422E;
+  outline: 2px solid #163B66;
   outline-offset: 2px;
 }
 
-/* Custom Ball-in-Circle Cursor styling for desktop mouse devices */
+/* Custom Cursor */
 @media (pointer: fine) {
   body, a, button, input, select, textarea, [role="button"], label {
     cursor: none !important;

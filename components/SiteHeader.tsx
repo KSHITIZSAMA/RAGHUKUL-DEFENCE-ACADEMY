@@ -82,24 +82,24 @@ export default function SiteHeader() {
   const isActivityActive = ["activities", "army-training", "women-empowerment", "sports-fitness"].includes(activeSection);
 
   return (
-    <header className="sticky top-0 z-50 bg-[#E5E7DF]/95 backdrop-blur-md border-b border-[#BDC1B3]">
+    <header className="sticky top-0 z-50 bg-[#FFFFFF]/95 backdrop-blur-md border-b border-[#E2E8F0] shadow-xs">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="flex items-center justify-between h-16 sm:h-20">
           
-          {/* Logo with Tactical Badge styling */}
+          {/* Logo with NGO Badge styling */}
           <Link
             href="/#hero"
             onClick={(e) => handleNavClick(e, "hero")}
             className="flex items-center gap-3 group"
           >
-            <div className="w-10 h-10 bg-[#3F4632] text-white flex items-center justify-center font-mono font-bold text-lg tactical-cut-br shadow-sm group-hover:bg-[#1E2318] transition-colors">
+            <div className="w-10 h-10 bg-[#163B66] text-white flex items-center justify-center font-mono font-bold text-lg rounded-xl shadow-md group-hover:bg-[#0D223A] transition-colors">
               MV
             </div>
             <div className="flex flex-col">
-              <div className="display text-lg sm:text-xl font-bold tracking-wider text-[#181B15] leading-none group-hover:text-[#3F4632] transition-colors font-display">
+              <div className="display text-lg sm:text-xl font-bold tracking-wider text-[#0F172A] leading-none group-hover:text-[#163B66] transition-colors font-display">
                 MERE VATAN
               </div>
-              <span className="font-mono text-[10px] tracking-[0.2em] text-[#5E6553] uppercase mt-0.5 font-bold">
+              <span className="font-mono text-[10px] tracking-[0.2em] text-[#D97706] uppercase mt-0.5 font-bold">
                 WELFARE FOUNDATION
               </span>
             </div>
@@ -111,12 +111,12 @@ export default function SiteHeader() {
               href="/#about"
               onClick={(e) => handleNavClick(e, "about")}
               className={`py-2 transition-colors relative ${
-                activeSection === "about" ? "text-[#3F4632] font-extrabold" : "text-[#181B15] hover:text-[#3F4632]"
+                activeSection === "about" ? "text-[#163B66] font-extrabold" : "text-[#0F172A] hover:text-[#163B66]"
               }`}
             >
               ABOUT
               {activeSection === "about" && (
-                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#C98E2A]" />
+                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#D97706]" />
               )}
             </Link>
 
@@ -126,14 +126,14 @@ export default function SiteHeader() {
                 onClick={() => setDropdownOpen((prev) => !prev)}
                 onMouseEnter={() => setDropdownOpen(true)}
                 className={`flex items-center gap-1.5 py-2 transition-colors relative ${
-                  isActivityActive ? "text-[#3F4632] font-extrabold" : "text-[#181B15] hover:text-[#3F4632]"
+                  isActivityActive ? "text-[#163B66] font-extrabold" : "text-[#0F172A] hover:text-[#163B66]"
                 }`}
                 aria-expanded={dropdownOpen}
               >
-                <span>ACTIVITIES</span>
-                <span className="text-[10px] text-[#5E6553]">[▼]</span>
+                <span>WINGS & CAUSES</span>
+                <span className="text-[10px] text-[#64748B]">[▼]</span>
                 {isActivityActive && (
-                  <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#C98E2A]" />
+                  <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#D97706]" />
                 )}
               </button>
 
@@ -146,27 +146,27 @@ export default function SiteHeader() {
                     : "opacity-0 invisible -translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0"
                 }`}
               >
-                <div className="bg-[#F4F5F1] border-2 border-[#3F4632] tactical-cut-br shadow-2xl p-3 space-y-1.5">
-                  <div className="flex items-center justify-between px-2 py-1 bg-[#3F4632] text-white font-mono text-[10px] uppercase tracking-widest mb-1 tactical-cut-br">
-                    <span>ACTIVITIES SERVING</span>
-                    <span>3 DEPARTMENTS</span>
+                <div className="bg-[#FFFFFF] border-2 border-[#163B66] rounded-xl shadow-2xl p-3 space-y-1.5">
+                  <div className="flex items-center justify-between px-2.5 py-1 bg-[#163B66] text-white font-mono text-[10px] uppercase tracking-widest mb-1 rounded-lg">
+                    <span>NGO INITIATIVES</span>
+                    <span>3 WINGS</span>
                   </div>
                   {ACTIVITIES.map((act) => (
                     <Link
                       key={act.id}
                       href={act.href}
                       onClick={(e) => handleNavClick(e, act.id)}
-                      className={`block px-3 py-2.5 rounded-none transition-colors border-l-2 ${
+                      className={`block px-3 py-2.5 rounded-lg transition-colors border-l-3 ${
                         activeSection === act.id
-                          ? "bg-[#3F4632]/10 border-[#C98E2A] text-[#3F4632] font-bold"
-                          : "border-transparent hover:bg-[#3F4632]/10 hover:border-[#3F4632] text-[#181B15]"
+                          ? "bg-[#163B66]/10 border-[#D97706] text-[#163B66] font-bold"
+                          : "border-transparent hover:bg-[#F1F5F9] hover:border-[#163B66] text-[#0F172A]"
                       }`}
                     >
                       <div className="flex items-center justify-between">
                         <span className="font-bold text-xs uppercase font-mono">{act.label}</span>
-                        <span className="text-[10px] text-[#5E6553] font-mono">{act.code}</span>
+                        <span className="text-[10px] text-[#64748B] font-mono">{act.code}</span>
                       </div>
-                      <div className="text-[11px] text-[#5E6553] mt-0.5 leading-snug font-sans">{act.desc}</div>
+                      <div className="text-[11px] text-[#64748B] mt-0.5 leading-snug font-sans">{act.desc}</div>
                     </Link>
                   ))}
                 </div>
@@ -179,12 +179,12 @@ export default function SiteHeader() {
                 href={item.href}
                 onClick={(e) => handleNavClick(e, item.id)}
                 className={`py-2 transition-colors relative ${
-                  activeSection === item.id ? "text-[#3F4632] font-extrabold" : "text-[#181B15] hover:text-[#3F4632]"
+                  activeSection === item.id ? "text-[#163B66] font-extrabold" : "text-[#0F172A] hover:text-[#163B66]"
                 }`}
               >
                 {item.label}
                 {activeSection === item.id && (
-                  <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#C98E2A]" />
+                  <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#D97706]" />
                 )}
               </Link>
             ))}
@@ -194,16 +194,17 @@ export default function SiteHeader() {
           <div className="hidden lg:flex items-center gap-3">
             <Link
               href="/membership"
-              className="text-xs font-mono font-bold tracking-wider uppercase px-4 py-2 border-2 border-[#3F4632] text-[#3F4632] hover:bg-[#3F4632] hover:text-white transition-colors tactical-cut-br"
+              className="text-xs font-mono font-bold tracking-wider uppercase px-4 py-2 border-2 border-[#163B66] text-[#163B66] hover:bg-[#163B66] hover:text-white transition-colors rounded-xl"
             >
-              JOIN
+              JOIN CAUSE
             </Link>
             <Link
               href="/#donors"
               onClick={(e) => handleNavClick(e, "donors")}
-              className="text-xs font-mono font-bold tracking-wider uppercase px-4 py-2 bg-[#3F4632] text-white hover:bg-[#1E2318] transition-colors tactical-cut-br shadow-sm"
+              className="text-xs font-mono font-bold tracking-wider uppercase px-5 py-2 bg-[#D97706] text-white hover:bg-[#B45309] transition-colors rounded-xl shadow-md flex items-center gap-1.5"
             >
-              DONATE
+              <span>❤</span>
+              <span>DONATE</span>
             </Link>
           </div>
 
@@ -212,11 +213,11 @@ export default function SiteHeader() {
             aria-label="Toggle menu"
             aria-expanded={mobileOpen}
             onClick={() => setMobileOpen((v) => !v)}
-            className="lg:hidden flex flex-col gap-1.5 p-2.5 border border-[#BDC1B3] bg-[#F4F5F1]"
+            className="lg:hidden flex flex-col gap-1.5 p-2.5 border border-[#CBD5E1] bg-[#F8F9FA] rounded-lg"
           >
-            <span className="w-6 h-0.5 bg-[#181B15]" />
-            <span className="w-6 h-0.5 bg-[#181B15]" />
-            <span className="w-6 h-0.5 bg-[#181B15]" />
+            <span className="w-6 h-0.5 bg-[#0F172A]" />
+            <span className="w-6 h-0.5 bg-[#0F172A]" />
+            <span className="w-6 h-0.5 bg-[#0F172A]" />
           </button>
         </div>
       </div>
@@ -229,22 +230,22 @@ export default function SiteHeader() {
 
       {/* Mobile Navigation */}
       {mobileOpen && (
-        <nav className="lg:hidden bg-[#F4F5F1] border-b-2 border-[#3F4632] px-4 sm:px-6 py-5 flex flex-col gap-3 font-mono text-xs uppercase tracking-wider">
+        <nav className="lg:hidden bg-[#FFFFFF] border-b-2 border-[#163B66] px-4 sm:px-6 py-5 flex flex-col gap-3 font-mono text-xs uppercase tracking-wider shadow-xl">
           <Link
             href="/#about"
             onClick={(e) => handleNavClick(e, "about")}
-            className={`py-1 ${activeSection === "about" ? "text-[#C98E2A] font-bold" : "text-[#181B15]"}`}
+            className={`py-1 ${activeSection === "about" ? "text-[#D97706] font-bold" : "text-[#0F172A]"}`}
           >
-            // ABOUT
+            • ABOUT NGO
           </Link>
 
           {/* Mobile Activities Column */}
-          <div className="border-y border-[#BDC1B3] py-3 my-1">
+          <div className="border-y border-[#E2E8F0] py-3 my-1">
             <button
               onClick={() => setMobileActivitiesOpen((v) => !v)}
-              className="flex items-center justify-between w-full font-mono text-xs font-bold text-[#3F4632]"
+              className="flex items-center justify-between w-full font-mono text-xs font-bold text-[#163B66]"
             >
-              <span>// ACTIVITIES SERVING</span>
+              <span>• WINGS & CAUSES</span>
               <span>{mobileActivitiesOpen ? "▲" : "▼"}</span>
             </button>
             {mobileActivitiesOpen && (
@@ -255,11 +256,11 @@ export default function SiteHeader() {
                     href={act.href}
                     onClick={(e) => handleNavClick(e, act.id)}
                     className={`py-1.5 border-l-2 pl-3 ${
-                      activeSection === act.id ? "border-[#C98E2A] text-[#3F4632] font-bold" : "border-[#BDC1B3] text-[#181B15]"
+                      activeSection === act.id ? "border-[#D97706] text-[#163B66] font-bold" : "border-[#CBD5E1] text-[#0F172A]"
                     }`}
                   >
                     <div className="font-bold text-xs">{act.label}</div>
-                    <div className="text-[10px] text-[#5E6553]">{act.code}</div>
+                    <div className="text-[10px] text-[#64748B]">{act.code}</div>
                   </Link>
                 ))}
               </div>
@@ -271,18 +272,18 @@ export default function SiteHeader() {
               key={item.id}
               href={item.href}
               onClick={(e) => handleNavClick(e, item.id)}
-              className={`py-1 ${activeSection === item.id ? "text-[#C98E2A] font-bold" : "text-[#181B15]"}`}
+              className={`py-1 ${activeSection === item.id ? "text-[#D97706] font-bold" : "text-[#0F172A]"}`}
             >
-              // {item.label}
+              • {item.label}
             </Link>
           ))}
 
-          <div className="flex gap-3 pt-4 border-t border-[#BDC1B3]">
-            <Link href="/membership" onClick={() => setMobileOpen(false)} className="px-4 py-2.5 border-2 border-[#3F4632] text-center flex-1 font-bold tactical-cut-br text-[#3F4632]">
-              JOIN
+          <div className="flex gap-3 pt-4 border-t border-[#E2E8F0]">
+            <Link href="/membership" onClick={() => setMobileOpen(false)} className="px-4 py-2.5 border-2 border-[#163B66] text-center flex-1 font-bold rounded-xl text-[#163B66]">
+              JOIN CAUSE
             </Link>
-            <Link href="/#donors" onClick={(e) => handleNavClick(e, "donors")} className="px-4 py-2.5 bg-[#3F4632] text-white text-center flex-1 font-bold tactical-cut-br">
-              DONATE
+            <Link href="/#donors" onClick={(e) => handleNavClick(e, "donors")} className="px-4 py-2.5 bg-[#D97706] text-white text-center flex-1 font-bold rounded-xl shadow-md">
+              ❤ DONATE
             </Link>
           </div>
         </nav>

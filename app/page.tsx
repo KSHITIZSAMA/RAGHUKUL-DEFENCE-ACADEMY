@@ -27,57 +27,57 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 relative z-10">
           <div className="grid lg:grid-cols-12 gap-8 items-center min-h-[500px]">
             
-            {/* Left Column: MILIDECK Style Boxed Title + Subtitle + Action Buttons */}
+            {/* Left Column: NGO Boxed Title + Subtitle + Action Buttons */}
             <div className="lg:col-span-6 flex flex-col justify-between space-y-6">
               <div className="space-y-6 pt-2">
                 
                 {/* Title Highlight Box */}
                 <div className="space-y-2">
                   <div className="milideck-title-box">
-                    <h1 className="text-4xl sm:text-6xl font-black uppercase tracking-wider text-[#181B15] leading-none font-display">
+                    <h1 className="text-4xl sm:text-6xl font-black uppercase tracking-wider text-[#163B66] leading-none font-display">
                       MERE VATAN
                     </h1>
                   </div>
-                  <div className="text-2xl sm:text-4xl font-extrabold uppercase tracking-tight text-[#3F4632] leading-tight font-display">
+                  <div className="text-2xl sm:text-4xl font-extrabold uppercase tracking-tight text-[#0F172A] leading-tight font-display">
                     WELFARE FOUNDATION
                   </div>
-                  {/* Theme Accent Tri-Color Line Strip */}
-                  <div className="w-36 h-1 flex my-3">
-                    <span className="w-1/3 bg-[#3F4632]" />
-                    <span className="w-1/3 bg-[#738062]" />
-                    <span className="w-1/3 bg-[#C98E2A]" />
+                  {/* Theme Accent Tri-Color NGO Line Strip */}
+                  <div className="w-36 h-1.5 flex my-3 rounded-full overflow-hidden shadow-xs">
+                    <span className="w-1/3 bg-[#FF9933]" />
+                    <span className="w-1/3 bg-[#163B66]" />
+                    <span className="w-1/3 bg-[#138808]" />
                   </div>
                 </div>
 
                 {/* Subtitle */}
-                <p className="text-xs sm:text-sm font-body text-[#5E6553] tracking-wide uppercase max-w-md leading-relaxed font-semibold">
-                  Evolution of Defence Strategy, Youth Physical Endurance & Vocational Empowerment.
+                <p className="text-xs sm:text-sm font-body text-[#475569] tracking-wide uppercase max-w-md leading-relaxed font-semibold">
+                  Empowering Youth for Defence Services, Women Livelihoods & Community Sports Excellence Across India.
                 </p>
 
                 {/* Action CTA Buttons */}
                 <div className="flex flex-wrap gap-3 pt-2">
                   <Link
                     href="/membership"
-                    className="px-6 py-3 bg-[#3F4632] text-white font-mono text-xs font-bold tracking-widest uppercase hover:bg-[#1E2318] transition-all shadow-md tactical-cut-br"
+                    className="px-6 py-3.5 bg-[#D97706] text-white font-mono text-xs font-bold tracking-widest uppercase hover:bg-[#B45309] transition-all shadow-md rounded-xl flex items-center gap-2"
                   >
-                    BECOME A CADET
+                    <span>JOIN AS VOLUNTEER / CADET</span>
                   </Link>
                   <ScrollButton
                     targetId="about"
-                    className="px-6 py-3 border-2 border-[#3F4632] text-[#3F4632] font-mono text-xs font-bold tracking-widest uppercase hover:bg-[#3F4632] hover:text-white transition-all tactical-cut-br"
+                    className="px-6 py-3.5 border-2 border-[#163B66] text-[#163B66] font-mono text-xs font-bold tracking-widest uppercase hover:bg-[#163B66] hover:text-white transition-all rounded-xl"
                   >
-                    EXPLORE FOUNDATION ↓
+                    OUR MISSION & IMPACT ↓
                   </ScrollButton>
                 </div>
               </div>
 
-              {/* Bottom Left Dark Tactical Olive Box */}
-              <div className="bg-[#2E3424] text-white p-5 sm:p-6 shadow-xl flex items-center gap-6 border-l-4 border-[#C98E2A] max-w-xl tactical-cut-br border-t border-b border-r border-[#4A543A]">
-                <div className="text-4xl sm:text-5xl font-mono font-extrabold text-white shrink-0">
+              {/* Bottom Left NGO Navy Impact Box */}
+              <div className="bg-[#163B66] text-white p-5 sm:p-6 shadow-xl flex items-center gap-6 border-l-6 border-[#D97706] max-w-xl rounded-2xl border-t border-b border-r border-[#205493]">
+                <div className="text-4xl sm:text-5xl font-mono font-extrabold text-[#FF9933] shrink-0">
                   <StatCounter end={98} suffix="+" />
                 </div>
-                <div className="text-[11px] font-mono tracking-wider text-[#CFD3C7] leading-relaxed uppercase">
-                  QUALIFIED CANDIDATES & SUCCESSFUL DEFENCE RECRUITMENT SELECTIONS ACROSS ARMY, POLICE & ATHLETIC TRIALS.
+                <div className="text-[11px] font-mono tracking-wider text-[#E2E8F0] leading-relaxed uppercase font-semibold">
+                  QUALIFIED CANDIDATES & SUCCESSFUL DEFENCE SELECTIONS ACROSS ARMY, POLICE & ATHLETIC TRIALS.
                 </div>
               </div>
 
@@ -87,10 +87,10 @@ export default function Home() {
             <div className="lg:col-span-6 relative min-h-[380px] sm:min-h-[480px] lg:min-h-[520px] flex items-center justify-center">
               
               {/* Outer X-Framed Image Container */}
-              <div className="w-full h-full relative min-h-[380px] sm:min-h-[480px] hero-x-frame shadow-2xl bg-[#1E2318] border-2 border-[#3F4632]">
+              <div className="w-full h-full relative min-h-[380px] sm:min-h-[480px] hero-x-frame shadow-2xl bg-[#0D223A] border-2 border-[#163B66]">
                 
                 <div className="absolute inset-0 tech-grid-dark opacity-30 z-10 pointer-events-none" />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1E2318]/70 via-transparent to-[#1E2318]/30 z-10 pointer-events-none" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0D223A]/70 via-transparent to-[#0D223A]/30 z-10 pointer-events-none" />
 
                 <Image
                   src="/images/hero-cadet.png"
@@ -101,8 +101,8 @@ export default function Home() {
                 />
 
                 <div className="absolute bottom-6 right-8 z-20 hidden sm:block">
-                  <div className="px-3 py-1.5 bg-[#3F4632]/90 backdrop-blur-sm border border-[#CFD3C7]/40 text-[#CFD3C7] font-mono text-[10px] uppercase tracking-widest tactical-cut-br shadow-lg">
-                    MERE VATAN FOUNDATION // CADET HERO FRAME
+                  <div className="px-3.5 py-1.5 bg-[#163B66]/90 backdrop-blur-sm border border-[#D97706]/60 text-white font-mono text-[10px] uppercase tracking-widest rounded-xl shadow-lg">
+                    REGISTERED NGO #12A/80G // MERE VATAN
                   </div>
                 </div>
 
