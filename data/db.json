@@ -1,0 +1,200 @@
+{
+  "users": [
+    {
+      "id": "u1",
+      "name": "Admin",
+      "email": "admin@shaktisena.org",
+      "passwordHash": "$2b$10$vw/R6/DGoR15hahfV7yq8OxBQgfNrfA53Nhwke7vKgX3ohcaZd/la",
+      "role": "ADMIN"
+    },
+    {
+      "id": "u2",
+      "name": "Ravi Kumar",
+      "email": "member@shaktisena.org",
+      "passwordHash": "$2b$10$j5xEVJrHV3.N2euQhNjmhOeiNgyMhvJsmNtZxibXyF4ekxFLRhiOi",
+      "role": "MEMBER",
+      "memberId": "m1"
+    }
+  ],
+  "members": [
+    {
+      "id": "m1",
+      "name": "Ravi Kumar",
+      "program": "Army Training Prep",
+      "joinedOn": "2025-01-14",
+      "idCardIssued": true,
+      "appointmentLetterIssued": true
+    }
+  ],
+  "notices": [
+    {
+      "id": "n1",
+      "title": "New batch for Army Physical Test prep starts 1st Sept",
+      "body": "Registrations open for the next 12-week Army Training Prep batch. Report to the ground by 5:30 AM.",
+      "date": "2026-08-10",
+      "audience": "ALL"
+    },
+    {
+      "id": "n2",
+      "title": "Stitching & Tailoring skill batch — seats filling fast",
+      "body": "Women Empowerment wing's 6-week stitching and tailoring certificate batch has limited seats left.",
+      "date": "2026-08-05",
+      "audience": "ALL"
+    }
+  ],
+  "events": [
+    {
+      "id": "e1",
+      "title": "Independence Day Run & Flag Hoisting",
+      "date": "2026-08-15",
+      "location": "District Sports Ground",
+      "description": "5 km community run followed by flag hoisting and a felicitation for top army-exam qualifiers this year."
+    },
+    {
+      "id": "e2",
+      "title": "Skill Fair — Women Entrepreneurs Showcase",
+      "date": "2026-09-20",
+      "location": "NGO Community Hall",
+      "description": "Graduates of our tailoring, beautician and food-processing batches sell and showcase their work."
+    }
+  ],
+  "gallery": [
+    {
+      "id": "g1",
+      "caption": "Morning PT session — Army Training wing",
+      "category": "Army Training"
+    },
+    {
+      "id": "g2",
+      "caption": "Sewing machine training — Women Empowerment wing",
+      "category": "Women Empowerment"
+    },
+    {
+      "id": "g3",
+      "caption": "District-level kabaddi selection trials",
+      "category": "Sports & Fitness"
+    }
+  ],
+  "testimonials": [
+    {
+      "id": "t1",
+      "name": "Suresh Yadav",
+      "program": "Army Training Prep",
+      "quote": "The daily PT and mock written tests here got me through my Army physical in the first attempt.",
+      "year": "2025"
+    },
+    {
+      "id": "t2",
+      "name": "Pooja Devi",
+      "program": "Women Empowerment",
+      "quote": "I learned tailoring here and now run my own small stitching unit from home.",
+      "year": "2024"
+    }
+  ],
+  "management": [
+    {
+      "id": "mg1",
+      "name": "Col. (Retd.) R. P. Singh",
+      "role": "President",
+      "bio": "20 years in the Indian Army, now leads our Army Training wing."
+    },
+    {
+      "id": "mg2",
+      "name": "Anjali Sharma",
+      "role": "Secretary, Women Empowerment",
+      "bio": "Former skill-development officer; runs the women's skilling programs."
+    },
+    {
+      "id": "mg3",
+      "name": "Vikram Rathore",
+      "role": "Sports Coordinator",
+      "bio": "State-level athlete turned coach for the Sports & Fitness wing."
+    }
+  ],
+  "donors": [
+    {
+      "id": "d1",
+      "name": "Rakesh Traders Pvt. Ltd.",
+      "amount": 25000,
+      "date": "2026-07-01"
+    },
+    {
+      "id": "d2",
+      "name": "Anita Verma",
+      "amount": 5000,
+      "date": "2026-06-15"
+    },
+    {
+      "id": "d3",
+      "name": "Local Business Association",
+      "amount": 15000,
+      "date": "2026-05-20"
+    },
+    {
+      "id": "d_1787027286790_3521",
+      "name": "Test Donor",
+      "amount": 500,
+      "date": "2026-08-18"
+    },
+    {
+      "id": "d_1787027332024_764",
+      "name": "Test Donor",
+      "amount": 500,
+      "date": "2026-08-18"
+    },
+    {
+      "id": "d_1787130105829_6283",
+      "name": " bv bv ",
+      "amount": 45678,
+      "date": "2026-08-19"
+    }
+  ],
+  "donations": [
+    {
+      "id": "don_1787027286790_2234",
+      "date": "2026-08-18",
+      "receiptNo": "RCPT-2026-0001",
+      "donorName": "Test Donor",
+      "email": "test@example.com",
+      "amount": 500,
+      "purpose": "General Fund"
+    },
+    {
+      "id": "don_1787027332024_3695",
+      "date": "2026-08-18",
+      "receiptNo": "RCPT-2026-0002",
+      "donorName": "Test Donor",
+      "email": "test@example.com",
+      "amount": 500,
+      "purpose": "General Fund"
+    },
+    {
+      "id": "don_1787130105829_2384",
+      "date": "2026-08-19",
+      "receiptNo": "RCPT-2026-0003",
+      "donorName": " bv bv ",
+      "email": "",
+      "amount": 45678,
+      "purpose": "General Fund"
+    }
+  ],
+  "membershipApplications": [
+    {
+      "id": "app_1787027286818_4613",
+      "date": "2026-08-18",
+      "status": "PENDING",
+      "name": "Suman",
+      "phone": "9999999999",
+      "email": "",
+      "program": "Army Training",
+      "message": ""
+    }
+  ],
+  "contactMessages": [],
+  "objectives": [
+    "Prepare rural and semi-urban youth for Army and defence recruitment through physical and written training.",
+    "Equip women with market-ready vocational skills for financial independence.",
+    "Promote sports and fitness as a path to discipline, health and opportunity.",
+    "Build a transparent, community-driven organisation trusted by donors and government bodies alike."
+  ]
+}

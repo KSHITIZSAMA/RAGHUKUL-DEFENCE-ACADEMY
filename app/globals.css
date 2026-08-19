@@ -1,0 +1,177 @@
+@import "tailwindcss";
+
+:root {
+  --tactical-olive: #3F4632;
+  --tactical-olive-dark: #1E2318;
+  --tactical-olive-mid: #586248;
+  --tactical-olive-light: #738062;
+  --tactical-bg: #E5E7DF;
+  --tactical-bg-subtle: #DCDFD6;
+  --tactical-card: #F4F5F1;
+  --tactical-dark: #181B15;
+  --tactical-muted: #5E6553;
+  --tactical-badge: #CFD3C7;
+  --tactical-amber: #C98E2A;
+  --tactical-border: #BDC1B3;
+  --tactical-border-dark: #353C2B;
+
+  --ink: var(--tactical-dark);
+  --paper: var(--tactical-bg);
+  --paper-2: var(--tactical-card);
+  --olive: var(--tactical-olive);
+  --olive-2: var(--tactical-olive-mid);
+  --amber: var(--tactical-amber);
+  --rust: var(--tactical-olive-mid);
+  --sage: var(--tactical-olive-light);
+
+  --font-chakra: "Chakra Petch", "Rajdhani", sans-serif;
+  --font-rajdhani: "Rajdhani", "Chakra Petch", sans-serif;
+  --font-inter: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --font-display: var(--font-rajdhani);
+  --font-body: var(--font-inter);
+  --font-mono: var(--font-chakra);
+}
+
+@theme inline {
+  --color-tactical-olive: var(--tactical-olive);
+  --color-tactical-olive-dark: var(--tactical-olive-dark);
+  --color-tactical-olive-mid: var(--tactical-olive-mid);
+  --color-tactical-olive-light: var(--tactical-olive-light);
+  --color-tactical-bg: var(--tactical-bg);
+  --color-tactical-bg-subtle: var(--tactical-bg-subtle);
+  --color-tactical-card: var(--tactical-card);
+  --color-tactical-dark: var(--tactical-dark);
+  --color-tactical-muted: var(--tactical-muted);
+  --color-tactical-badge: var(--tactical-badge);
+  --color-tactical-amber: var(--tactical-amber);
+  --color-tactical-border: var(--tactical-border);
+  
+  --color-ink: var(--ink);
+  --color-paper: var(--paper);
+  --color-paper-2: var(--paper-2);
+  --color-olive: var(--olive);
+  --color-olive-2: var(--olive-2);
+  --color-amber: var(--amber);
+  --color-rust: var(--rust);
+  --color-sage: var(--sage);
+
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+  --font-mono: var(--font-mono);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--tactical-bg);
+  color: var(--tactical-dark);
+  font-family: var(--font-body);
+  letter-spacing: -0.01em;
+}
+
+h1, h2, h3, h4, .display {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+/* Tactical Angle Cuts (Chamfered Corners) */
+.tactical-cut-br {
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
+}
+
+.tactical-cut-tl {
+  clip-path: polygon(20px 0, 100% 0, 100% 100%, 0 100%, 0 20px);
+}
+
+.tactical-cut-both {
+  clip-path: polygon(18px 0, 100% 0, 100% calc(100% - 18px), calc(100% - 18px) 100%, 0 100%, 0 18px);
+}
+
+.tactical-cut-top-right {
+  clip-path: polygon(0 0, calc(100% - 24px) 0, 100% 24px, 100% 100%, 0 100%);
+}
+
+.tactical-slash-left {
+  clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+}
+
+.tactical-slash-right {
+  clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+/* Hero Section "X" Shaped Image Frame (Matching MILIDECK Slide 1) */
+.hero-x-frame {
+  clip-path: polygon(
+    22% 0%, 
+    56% 0%, 
+    48% 18%, 
+    100% 0%, 
+    100% 36%, 
+    88% 50%, 
+    100% 64%, 
+    100% 100%, 
+    48% 100%, 
+    40% 82%, 
+    18% 100%, 
+    0% 100%, 
+    12% 50%, 
+    0% 0%
+  );
+}
+
+/* Title Box Backdrop - MILIDECK Style */
+.milideck-title-box {
+  background-color: #CFD3C7;
+  border: 1px solid #BDC1B3;
+  padding: 0.35rem 1.25rem;
+  display: inline-block;
+  box-shadow: 2px 2px 0px rgba(24, 27, 21, 0.1);
+}
+
+/* Technical Grid Pattern Overlay */
+.tech-grid-pattern {
+  background-image: 
+    linear-gradient(to right, rgba(59, 66, 46, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(59, 66, 46, 0.07) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.tech-grid-dark {
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Signature Military Tri-Band Line */
+.tri-band {
+  display: flex;
+  height: 4px;
+  width: 100%;
+}
+.tri-band > span { flex: 1; }
+.tri-band > span:nth-child(1) { background: #3B422E; }
+.tri-band > span:nth-child(2) { background: #6D7B58; }
+.tri-band > span:nth-child(3) { background: #C98E2A; }
+
+::selection {
+  background: #3B422E;
+  color: #FFFFFF;
+}
+
+:focus-visible {
+  outline: 2px solid #3B422E;
+  outline-offset: 2px;
+}
+
+/* Custom Ball-in-Circle Cursor styling for desktop mouse devices */
+@media (pointer: fine) {
+  body, a, button, input, select, textarea, [role="button"], label {
+    cursor: none !important;
+  }
+}
