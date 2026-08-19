@@ -35,11 +35,11 @@ export default function Home() {
                 <div className="space-y-2">
                   <div className="milideck-title-box">
                     <h1 className="text-4xl sm:text-6xl font-black uppercase tracking-wider text-[#181B15] leading-none font-display">
-                      RAGHUKUL
+                      MERE VATAN
                     </h1>
                   </div>
                   <div className="text-2xl sm:text-4xl font-extrabold uppercase tracking-tight text-[#3F4632] leading-tight font-display">
-                    DEFENCE & SPORT ACADEMY
+                    WELFARE FOUNDATION
                   </div>
                   {/* Theme Accent Tri-Color Line Strip */}
                   <div className="w-36 h-1 flex my-3">
@@ -66,7 +66,7 @@ export default function Home() {
                     targetId="about"
                     className="px-6 py-3 border-2 border-[#3F4632] text-[#3F4632] font-mono text-xs font-bold tracking-widest uppercase hover:bg-[#3F4632] hover:text-white transition-all tactical-cut-br"
                   >
-                    EXPLORE ACADEMY ↓
+                    EXPLORE FOUNDATION ↓
                   </ScrollButton>
                 </div>
               </div>
@@ -94,7 +94,7 @@ export default function Home() {
 
                 <Image
                   src="/images/hero-cadet.png"
-                  alt="Raghukul Defence Cadet in Training"
+                  alt="Mere Vatan Welfare Foundation Cadet in Training"
                   fill
                   priority
                   className="object-cover object-center filter contrast-105 brightness-95"
@@ -102,7 +102,7 @@ export default function Home() {
 
                 <div className="absolute bottom-6 right-8 z-20 hidden sm:block">
                   <div className="px-3 py-1.5 bg-[#3F4632]/90 backdrop-blur-sm border border-[#CFD3C7]/40 text-[#CFD3C7] font-mono text-[10px] uppercase tracking-widest tactical-cut-br shadow-lg">
-                    RAGHUKUL ACADEMY // CADET HERO FRAME
+                    MERE VATAN FOUNDATION // CADET HERO FRAME
                   </div>
                 </div>
 

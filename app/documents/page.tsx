@@ -1,8 +1,8 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "NGO Official Documents & Registration | Raghukul Defence Academy",
-  description: "View official registration certificates, 80G tax exemption, 12A registration, NITI Aayog Darpan ID, and audited financial statements of Raghukul Defence & Sport Academy.",
+  title: "NGO Official Documents & Registration | Mere Vatan Welfare Foundation",
+  description: "View official registration certificates, 80G tax exemption, 12A registration, NITI Aayog Darpan ID, and audited financial statements of Mere Vatan Welfare Foundation.",
 };
 
 const DOCUMENTS = [
@@ -15,7 +15,7 @@ const DOCUMENTS = [
     authority: "Income Tax Department, Govt. of India",
     date: "April 12, 2024",
     status: "Active & Valid",
-    description: "Donations to Raghukul Defence & Sport Academy are 50% tax exempt under Section 80G of the Income Tax Act, 1961.",
+    description: "Donations to Mere Vatan Welfare Foundation are 50% tax exempt under Section 80G of the Income Tax Act, 1961.",
     size: "1.8 MB • PDF",
     fileUrl: "#",
     icon: "📜",
@@ -43,7 +43,7 @@ const DOCUMENTS = [
     authority: "Registrar of Societies & Sports Academies",
     date: "January 15, 2024",
     status: "Registered",
-    description: "Legal founding document certifying the establishment of Raghukul Defence & Sport Academy Foundation as a registered society.",
+    description: "Legal founding document certifying the establishment of Mere Vatan Welfare Foundation as a registered society.",
     size: "2.4 MB • PDF",
     fileUrl: "#",
     icon: "📑",
@@ -85,7 +85,7 @@ const DOCUMENTS = [
     authority: "Central Board of Direct Taxes (CBDT)",
     date: "January 20, 2024",
     status: "Active",
-    description: "Official Permanent Account Number and Tax Deduction Account Number assigned to the academy for transparent banking operations.",
+    description: "Official Permanent Account Number and Tax Deduction Account Number assigned to the foundation for transparent banking operations.",
     size: "1.1 MB • PDF",
     fileUrl: "#",
     icon: "💳",
@@ -102,7 +102,7 @@ export default function DocumentsPage() {
             href="/"
             className="inline-flex items-center gap-2 text-xs font-mono tracking-widest text-[#738062] hover:text-[#C98E2A] transition-colors uppercase"
           >
-            <span>←</span> Back to Academy Home
+            <span>←</span> Back to Foundation Home
           </Link>
         </div>
 
@@ -116,7 +116,7 @@ export default function DocumentsPage() {
             NGO Registration & Compliance Documents
           </h1>
           <p className="text-[#CFD3C7] max-w-3xl text-sm md:text-base leading-relaxed font-sans">
-            Raghukul Defence & Sport Academy Foundation operates with 100% legal transparency and governance. Below are our verified government registration certificates, 80G tax exemption documents, 12A trust certificates, and audited financial statements.
+            Mere Vatan Welfare Foundation operates with 100% legal transparency and governance. Below are our verified government registration certificates, 80G tax exemption documents, 12A trust certificates, and audited financial statements.
           </p>
 
           {/* Quick Stat Pill */}

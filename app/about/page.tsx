@@ -8,9 +8,9 @@ export default function AboutPage() {
   return (
     <div>
       <PageHero
-        eyebrow="ABOUT ACADEMY"
+        eyebrow="ABOUT FOUNDATION"
         title="Who we are"
-        subtitle="Raghukul Defence & Sport Academy is a community-run organization based in Lucknow, working across key activities — Army Training, Women Empowerment and Sports & Fitness — to prepare local youth for real opportunity."
+        subtitle="Mere Vatan Welfare Foundation is a community-run organization based in Lucknow, working across key activities — Army Training, Women Empowerment and Sports & Fitness — to prepare local youth for real opportunity."
       />
 
       {president && (
@@ -21,7 +21,7 @@ export default function AboutPage() {
           <div>
             <p className="font-mono text-xs tracking-[0.2em] text-rust mb-2">PRESIDENT'S MESSAGE</p>
             <p className="text-lg leading-relaxed text-ink/80 max-w-2xl">
-              "We started this academy with one belief — that discipline, skill
+              "We started this foundation with one belief — that discipline, skill
               and fitness can change a family's future in one generation.
               Every batch we run, every certificate we issue, is a step
               toward that."
@@ -35,7 +35,7 @@ export default function AboutPage() {
       <section className="bg-paper-2 py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <p className="font-mono text-xs tracking-[0.2em] text-rust mb-3">MANAGEMENT TEAM</p>
-          <h2 className="text-3xl mb-8">Who runs Raghukul Defence & Sport Academy</h2>
+          <h2 className="text-3xl mb-8">Who runs Mere Vatan Welfare Foundation</h2>
           <div className="grid sm:grid-cols-3 gap-6">
             {data.management.map((m) => (
               <div key={m.id} className="bg-paper p-6 rounded-sm border border-ink/10">

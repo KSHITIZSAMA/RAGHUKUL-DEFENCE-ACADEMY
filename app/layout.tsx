@@ -6,7 +6,7 @@ import CustomCursor from "@/components/CustomCursor";
 import MobileDock from "@/components/MobileDock";
 
 export const metadata: Metadata = {
-  title: "Raghukul Defence & Sport Academy | Army Training & Fitness",
+  title: "Mere Vatan Welfare Foundation | Army Training & Fitness",
   description:
     "Preparing youth for the armed forces, equipping women with livelihood skills, and building a fitter community in Lucknow.",
 };

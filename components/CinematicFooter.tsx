@@ -318,7 +318,7 @@ export function CinematicFooter() {
             ref={giantTextRef}
             className="footer-giant-bg-text absolute -bottom-[5vh] left-1/2 -translate-x-1/2 whitespace-nowrap z-0 pointer-events-none select-none font-display uppercase"
           >
-            RAGHUKUL
+            MERE VATAN
           </div>
 
           {/* 1. Sleek Continuous Marquee Ticker (Positioned safely near top of footer) */}
@@ -334,7 +334,7 @@ export function CinematicFooter() {
           {/* 2. Main Center Content */}
           <div className="relative z-10 flex flex-1 flex-col items-center justify-center px-6 mt-20 sm:mt-24 w-full max-w-5xl mx-auto">
             <div className="inline-block px-4 py-1 bg-[#3F4632] text-[#C98E2A] font-mono text-xs font-bold uppercase tracking-widest mb-3 tactical-cut-br border border-[#586248]">
-              // JOIN RAGHUKUL ACADEMY
+              // JOIN MERE VATAN FOUNDATION
             </div>
 
             <h2
@@ -414,7 +414,7 @@ export function CinematicFooter() {
 
             {/* Copyright */}
             <div className="text-[#CFD3C7] text-[10px] md:text-xs font-mono tracking-widest uppercase order-2 md:order-1">
-              © 2026 RAGHUKUL DEFENCE & SPORT ACADEMY. ALL RIGHTS RESERVED.
+              © 2026 MERE VATAN WELFARE FOUNDATION. ALL RIGHTS RESERVED.
             </div>
 
             {/* "Made with Love" Badge */}

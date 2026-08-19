@@ -50,7 +50,7 @@ export default function MembershipPage() {
             href="/"
             className="inline-flex items-center gap-2 text-xs font-mono tracking-widest text-[#738062] hover:text-[#C98E2A] transition-colors uppercase"
           >
-            <span>←</span> Back to Academy Home
+            <span>←</span> Back to Foundation Home
           </Link>
         </div>
 
@@ -60,7 +60,7 @@ export default function MembershipPage() {
             OFFICIAL CADET REGISTRATION PORTAL
           </span>
           <h1 className="text-3xl md:text-5xl font-black font-display uppercase tracking-tight text-white mb-3">
-            Join Raghukul Defence Academy
+            Join Mere Vatan Welfare Foundation
           </h1>
           <p className="text-[#CFD3C7] text-sm md:text-base font-sans max-w-2xl leading-relaxed">
             Apply for any of our three specialized wings: Army & Defence Entrance Training, Women Empowerment Workshops, or Sports & Physical Fitness Coaching.

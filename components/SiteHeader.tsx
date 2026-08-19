@@ -93,14 +93,14 @@ export default function SiteHeader() {
             className="flex items-center gap-3 group"
           >
             <div className="w-10 h-10 bg-[#3F4632] text-white flex items-center justify-center font-mono font-bold text-lg tactical-cut-br shadow-sm group-hover:bg-[#1E2318] transition-colors">
-              RD
+              MV
             </div>
             <div className="flex flex-col">
               <div className="display text-lg sm:text-xl font-bold tracking-wider text-[#181B15] leading-none group-hover:text-[#3F4632] transition-colors font-display">
-                RAGHUKUL
+                MERE VATAN
               </div>
               <span className="font-mono text-[10px] tracking-[0.2em] text-[#5E6553] uppercase mt-0.5 font-bold">
-                DEFENCE & SPORT ACADEMY
+                WELFARE FOUNDATION
               </span>
             </div>
           </Link>
