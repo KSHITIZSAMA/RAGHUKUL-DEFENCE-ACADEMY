@@ -31,11 +31,11 @@ const GALLERY_ITEMS: GalleryItem[] = [
   },
   {
     id: "g3",
-    caption: "400m Athletic Sprint Recruitment Trial",
+    caption: "Athletic Sports Cadets Group Conditioning & Pavilion Honors Event",
     category: "Sports & Fitness",
     src: "/images/gallery-sports.png",
-    batchDate: "TRIALS 2026 // ATHLETICS",
-    location: "District Sports Complex, Lucknow",
+    batchDate: "TRIALS 2026 // ATHLETIC CONDITIONING",
+    location: "RDA Outdoor Stadium & Pavilion Grounds, Betul",
   },
   {
     id: "g4",
@@ -55,11 +55,11 @@ const GALLERY_ITEMS: GalleryItem[] = [
   },
   {
     id: "g6",
-    caption: "High Jump & Long Jump Coaching Camp",
+    caption: "High Jump, Endurance Sprint & Team Physical Coaching Camp",
     category: "Sports & Fitness",
     src: "/images/gallery-sports.png",
-    batchDate: "TRIALS 2026 // JUMP",
-    location: "District Athletics Field, Lucknow",
+    batchDate: "TRIALS 2026 // ATHLETIC TEAM",
+    location: "District Pavilion & Sports Stadium",
   },
 ];
 
