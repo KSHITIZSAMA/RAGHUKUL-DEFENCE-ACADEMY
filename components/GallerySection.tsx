@@ -76,7 +76,7 @@ export default function GallerySection() {
       : GALLERY_ITEMS.filter((item) => item.category === activeCategory);
 
   return (
-    <section id="gallery" className="py-20 bg-[#F4F6F9] border-b-2 border-[#163B66]/15 scroll-mt-24">
+    <section id="gallery" className="py-20 bg-transparent border-b-2 border-[#163B66]/15 scroll-mt-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
 
         {/* Header */}

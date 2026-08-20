@@ -5,6 +5,7 @@ import ContactSection from "@/components/ContactSection";
 import ScrollButton from "@/components/ScrollButton";
 import GallerySection from "@/components/GallerySection";
 import StatCounter from "@/components/StatCounter";
+import { GradientBackground } from "@/components/GradientBackground";
 
 export default function Home() {
   const data = db.read();
@@ -14,7 +15,9 @@ export default function Home() {
   const president = data.management.find((m) => m.role.toLowerCase().includes("president"));
 
   return (
-    <div className="bg-[#E5E7DF] text-[#181B15]">
+    <div className="relative text-[#0F172A] min-h-screen">
+      {/* 21st.dev Custom Noise & Gradient Backdrop */}
+      <GradientBackground className="fixed inset-0 pointer-events-none -z-10" />
       
       {/* ------------------------------------------------------------------------- */}
       {/* 1. HERO SECTION (id="hero") — MILIDECK "X" Framed Photo & 98+ Recruitment Stats */}
@@ -22,7 +25,7 @@ export default function Home() {
       {/* ------------------------------------------------------------------------- */}
       {/* 1. HERO SECTION (id="hero") — Modern NGO Prestige Hero Layout */}
       {/* ------------------------------------------------------------------------- */}
-      <section id="hero" className="relative bg-gradient-to-b from-[#F4F6F9] via-[#E2E8F0] to-[#F4F6F9] text-[#0F172A] overflow-hidden border-b-2 border-[#163B66]/20 py-10 lg:py-16 scroll-mt-24">
+      <section id="hero" className="relative bg-transparent text-[#0F172A] overflow-hidden border-b-2 border-[#163B66]/20 py-10 lg:py-16 scroll-mt-24">
         
         {/* Background Ambient Radiance & Tri-Color Strip */}
         <div className="absolute top-0 inset-x-0 h-1.5 flex z-30">
