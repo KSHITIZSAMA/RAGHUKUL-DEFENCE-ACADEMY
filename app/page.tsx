@@ -178,43 +178,72 @@ export default function Home() {
       </section>
 
       {/* ------------------------------------------------------------------------- */}
-      {/* 2. ABOUT SECTION (id="about") — Leadership, Bio, Objectives */}
-      {/* ------------------------------------------------------------------------- */}
-      {/* ------------------------------------------------------------------------- */}
-      {/* 2. ABOUT SECTION (id="about") — Leadership, Bio, Objectives */}
+      {/* 2. ABOUT SECTION (id="about") — Mission Yuva Shakti, Leadership & Objectives */}
       {/* ------------------------------------------------------------------------- */}
       <section id="about" className="py-20 border-b-2 border-[#163B66]/15 bg-[#F4F6F9] scroll-mt-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-10">
             <div>
               <div className="inline-block px-3 py-1 bg-[#D97706]/15 border border-[#D97706]/40 text-[#B45309] font-mono text-xs font-bold tracking-widest uppercase rounded-lg mb-3">
-                🏛️ ABOUT THE FOUNDATION
+                🏛️ ABOUT MERE VATAN WELFARE FOUNDATION
               </div>
               <h2 className="text-3xl sm:text-5xl font-black uppercase tracking-tight text-[#163B66] font-display">
-                WHO WE ARE & OUR MISSION
+                MISSION YUVA SHAKTI & OUR VISION
               </h2>
             </div>
-            <p className="text-sm font-mono text-[#64748B] max-w-md mt-3 md:mt-0 leading-relaxed uppercase font-semibold">
-              A community welfare foundation dedicated to youth defence physical coaching, women self-reliance & environmental sustainability.
-            </p>
+            <Link
+              href="/about"
+              className="inline-flex items-center gap-2 text-xs font-mono font-bold text-[#D97706] hover:text-[#B45309] uppercase tracking-wider mt-4 md:mt-0"
+            >
+              <span>EXPLORE FULL CSR PROJECT PROPOSAL</span>
+              <span>→</span>
+            </Link>
+          </div>
+
+          {/* Mission Yuva Shakti Banner */}
+          <div className="bg-[#163B66] text-white p-8 sm:p-10 rounded-3xl shadow-xl mb-12 border-b-8 border-[#D97706]">
+            <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+              <div>
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#D97706]/20 border border-[#D97706]/50 text-[#FF9933] font-mono text-[11px] font-bold uppercase tracking-widest mb-3">
+                  <span>🇮🇳 FLAGSHIP PROGRAMME 2026–27</span>
+                </div>
+                <h3 className="text-2xl sm:text-4xl font-black uppercase font-display text-white">
+                  "हर युवा को हुनर, हर हाथ को अवसर"
+                </h3>
+                <p className="text-gray-200 text-xs sm:text-sm font-body mt-2 max-w-2xl leading-relaxed">
+                  Empowering 300 direct rural youth and 1,000+ family members across Betul, MP through Defence Entrance Coaching, Women Self-Reliance, IT Employability & Sports Leadership.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-2 gap-3 shrink-0 font-mono text-xs text-center w-full md:w-auto">
+                <div className="bg-[#0D223A] p-3 rounded-xl border border-[#205493]">
+                  <div className="text-xl font-bold text-[#FF9933]">300</div>
+                  <div className="text-[10px] text-gray-300">Direct Beneficiaries</div>
+                </div>
+                <div className="bg-[#0D223A] p-3 rounded-xl border border-[#205493]">
+                  <div className="text-xl font-bold text-[#10B981]">1,000+</div>
+                  <div className="text-[10px] text-gray-300">Indirect Families</div>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* President's Message */}
           {president && (
-            <div className="bg-[#163B66] text-white p-8 sm:p-10 rounded-3xl shadow-2xl mb-12 border-l-8 border-[#D97706] grid md:grid-cols-[auto_1fr] gap-8 items-center border border-[#205493]/60">
-              <div className="w-24 h-24 bg-[#0D223A] text-[#FF9933] flex items-center justify-center text-3xl font-mono font-bold rounded-2xl border border-[#D97706]/40 shrink-0 shadow-lg">
-                {president.name.split(" ").map((w) => w[0]).slice(0, 2).join("")}
+            <div className="bg-white p-8 sm:p-10 rounded-3xl shadow-xl mb-12 border-l-8 border-[#D97706] border border-[#163B66]/15 grid md:grid-cols-[auto_1fr] gap-8 items-center">
+              <div className="w-24 h-24 bg-[#163B66] text-[#FF9933] flex items-center justify-center text-3xl font-mono font-bold rounded-2xl border border-[#D97706]/40 shrink-0 shadow-lg">
+                AR
               </div>
               <div>
-                <div className="font-mono text-xs text-[#FF9933] tracking-widest uppercase font-bold mb-2">
-                  // PRESIDENT'S MESSAGE
+                <div className="font-mono text-xs text-[#D97706] tracking-widest uppercase font-bold mb-2">
+                  // FOUNDER & PRESIDENT'S MESSAGE
                 </div>
-                <p className="text-base sm:text-lg italic font-sans leading-relaxed text-gray-100 max-w-3xl">
-                  "We started this foundation with one belief — that discipline, physical fitness, and skill self-reliance can transform a family's future in a single generation. Every batch we run, every cadet we mentor, is a step toward a stronger nation."
+                <p className="text-base sm:text-lg italic font-sans leading-relaxed text-[#334155] max-w-3xl">
+                  "We started this foundation with one belief — that discipline, physical fitness, and skill self-reliance can transform a family's economic future in a single generation. Every batch we run, every cadet we mentor, is a step toward a stronger nation."
                 </p>
-                <div className="mt-4 font-mono text-sm font-bold text-white uppercase">
-                  {president.name} — <span className="text-[#FF9933]">{president.role}</span>
+                <div className="mt-4 font-mono text-sm font-bold text-[#163B66] uppercase">
+                  {president.name} — <span className="text-[#D97706]">{president.role}</span>
                 </div>
               </div>
             </div>

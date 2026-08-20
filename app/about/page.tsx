@@ -1,3 +1,4 @@
+import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import { db } from "@/lib/db";
 
@@ -6,56 +7,341 @@ export default function AboutPage() {
   const president = data.management.find((m) => m.role.toLowerCase().includes("president"));
 
   return (
-    <div>
+    <div className="bg-[#F4F6F9] min-h-screen text-[#0F172A]">
+      {/* Hero Header */}
       <PageHero
-        eyebrow="ABOUT FOUNDATION"
-        title="Who we are"
-        subtitle="Mere Vatan Welfare Foundation is a community-run organization based in Lucknow, working across key activities — Army Training, Women Empowerment and Sports & Fitness — to prepare local youth for real opportunity."
+        eyebrow="ABOUT MERE VATAN WELFARE FOUNDATION"
+        title="Who We Are & Mission Yuva Shakti"
+        subtitle="Empowering rural and economically weaker youth across Betul and Madhya Pradesh through integrated Defence Career Preparation, Women Empowerment, Digital Skill Development, and Sports Leadership."
       />
 
-      {president && (
-        <section className="mx-auto max-w-6xl px-4 sm:px-6 py-16 grid sm:grid-cols-[auto_1fr] gap-8 items-start">
-          <div className="w-24 h-24 rounded-full bg-olive/15 flex items-center justify-center text-3xl font-mono text-olive shrink-0">
-            {president.name.split(" ").map((w) => w[0]).slice(0, 2).join("")}
-          </div>
-          <div>
-            <p className="font-mono text-xs tracking-[0.2em] text-rust mb-2">PRESIDENT'S MESSAGE</p>
-            <p className="text-lg leading-relaxed text-ink/80 max-w-2xl">
-              "We started this foundation with one belief — that discipline, skill
-              and fitness can change a family's future in one generation.
-              Every batch we run, every certificate we issue, is a step
-              toward that."
-            </p>
-            <p className="mt-3 font-semibold">{president.name}</p>
-            <p className="text-sm text-ink/60">{president.role}</p>
-          </div>
-        </section>
-      )}
-
-      <section className="bg-paper-2 py-16">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <p className="font-mono text-xs tracking-[0.2em] text-rust mb-3">MANAGEMENT TEAM</p>
-          <h2 className="text-3xl mb-8">Who runs Mere Vatan Welfare Foundation</h2>
-          <div className="grid sm:grid-cols-3 gap-6">
-            {data.management.map((m) => (
-              <div key={m.id} className="bg-paper p-6 rounded-sm border border-ink/10">
-                <h3 className="text-lg font-semibold normal-case">{m.name}</h3>
-                <p className="text-sm text-rust mb-2">{m.role}</p>
-                <p className="text-sm text-ink/70 leading-relaxed">{m.bio}</p>
+      {/* 1. Core Vision & Tagline Banner */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 -mt-8 relative z-20">
+        <div className="bg-[#163B66] text-white p-8 sm:p-12 rounded-3xl shadow-2xl border-b-8 border-[#D97706]">
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+            <div>
+              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#D97706]/20 border border-[#D97706]/50 text-[#FF9933] font-mono text-[11px] font-bold tracking-widest uppercase mb-3">
+                <span>🇮🇳 FLAGSHIP INITIATIVE: MISSION YUVA SHAKTI (2026–27)</span>
               </div>
-            ))}
+              <h2 className="text-2xl sm:text-4xl font-black font-display uppercase text-white tracking-tight">
+                "हर युवा को हुनर, हर हाथ को अवसर"
+              </h2>
+              <p className="text-gray-200 text-sm sm:text-base font-body mt-2 max-w-3xl leading-relaxed">
+                Building a structured ecosystem for 300 direct beneficiaries and 1,000+ rural family members in Betul & surrounding rural regions of Madhya Pradesh.
+              </p>
+            </div>
+
+            <div className="shrink-0 space-y-2 bg-[#0D223A] p-4 rounded-2xl border border-[#205493]">
+              <div className="text-xs font-mono text-[#FF9933] font-bold uppercase tracking-wider">🎯 THREE GUIDING PILLARS</div>
+              <div className="text-xs font-mono text-white">• हुनर से रोजगार (Skill to Employment)</div>
+              <div className="text-xs font-mono text-white">• अनुशासन से नेतृत्व (Discipline to Leadership)</div>
+              <div className="text-xs font-mono text-white">• अवसर से आत्मनिर्भरता (Opportunity to Self-Reliance)</div>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-4 sm:px-6 py-16">
-        <p className="font-mono text-xs tracking-[0.2em] text-rust mb-3">OUR OBJECTIVES</p>
-        <ul className="grid sm:grid-cols-2 gap-4">
-          {data.objectives.map((o, i) => (
-            <li key={i} className="border-l-2 border-olive pl-4 py-1 text-ink/80">{o}</li>
+      {/* 2. President's Message */}
+      {president && (
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 py-16">
+          <div className="bg-white p-8 sm:p-12 rounded-3xl border border-[#163B66]/15 shadow-xl grid md:grid-cols-[auto_1fr] gap-8 items-center border-l-8 border-[#D97706]">
+            <div className="w-28 h-28 bg-[#163B66] text-[#FF9933] flex items-center justify-center text-4xl font-mono font-bold rounded-3xl border border-[#D97706]/40 shrink-0 shadow-lg">
+              AR
+            </div>
+            <div>
+              <div className="font-mono text-xs text-[#D97706] tracking-widest uppercase font-bold mb-2">
+                // FOUNDER & PRESIDENT'S ADDRESS
+              </div>
+              <p className="text-base sm:text-lg italic font-sans leading-relaxed text-[#334155] max-w-3xl">
+                "Mera Vatan Welfare Foundation was established with a singular conviction — that discipline, physical fitness, and career-oriented skills can transform a family's economic future in a single generation. Our flagship project, Mission Yuva Shakti, is designed not just for examination coaching, but to make youth career-ready, skill-ready, and employment-ready."
+              </p>
+              <div className="mt-4 font-mono text-sm font-bold text-[#163B66] uppercase">
+                {president.name} — <span className="text-[#D97706]">{president.role}</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* 3. Project at a Glance & Target Beneficiaries */}
+      <section className="bg-white py-16 border-y border-[#163B66]/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <div className="inline-block px-3 py-1 bg-[#163B66]/15 text-[#163B66] font-mono text-xs font-bold tracking-widest uppercase rounded-lg mb-3">
+              📊 PROJECT AT A GLANCE (300 BENEFICIARIES)
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-black uppercase text-[#163B66] font-display">
+              Target Beneficiaries & Program Distribution
+            </h2>
+            <p className="text-xs sm:text-sm font-mono text-[#64748B] mt-2">
+              Comprehensive 12-Month Integrated Youth Development Program in Betul, Madhya Pradesh.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            <div className="bg-[#F8FAFC] p-6 rounded-3xl border border-[#163B66]/15 text-center shadow-sm hover:shadow-md transition-shadow">
+              <div className="text-4xl font-black font-mono text-[#163B66] mb-1">120</div>
+              <div className="text-xs font-mono font-bold text-[#D97706] uppercase mb-2">Defence & Uniformed Services</div>
+              <p className="text-xs text-[#64748B]">Army, Police, Agniveer & Paramilitary physical & written preparation.</p>
+            </div>
+
+            <div className="bg-[#F8FAFC] p-6 rounded-3xl border border-[#163B66]/15 text-center shadow-sm hover:shadow-md transition-shadow">
+              <div className="text-4xl font-black font-mono text-[#D97706] mb-1">75</div>
+              <div className="text-xs font-mono font-bold text-[#163B66] uppercase mb-2">Women Empowerment</div>
+              <p className="text-xs text-[#64748B]">Digital literacy, spoken English, MS Office & financial self-reliance.</p>
+            </div>
+
+            <div className="bg-[#F8FAFC] p-6 rounded-3xl border border-[#163B66]/15 text-center shadow-sm hover:shadow-md transition-shadow">
+              <div className="text-4xl font-black font-mono text-[#10B981] mb-1">75</div>
+              <div className="text-xs font-mono font-bold text-[#163B66] uppercase mb-2">Youth Skill & Employability</div>
+              <p className="text-xs text-[#64748B]">Data entry, Tally/GST, graphic design & apprenticeship linkages.</p>
+            </div>
+
+            <div className="bg-[#F8FAFC] p-6 rounded-3xl border border-[#163B66]/15 text-center shadow-sm hover:shadow-md transition-shadow">
+              <div className="text-4xl font-black font-mono text-[#163B66] mb-1">30+</div>
+              <div className="text-xs font-mono font-bold text-[#D97706] uppercase mb-2">Sports & Leadership</div>
+              <p className="text-xs text-[#64748B]">Athletics, Fauji Cup BPL tournaments & physical stamina camps.</p>
+            </div>
+          </div>
+
+          <div className="p-6 bg-[#0D223A] text-white rounded-2xl flex flex-col md:flex-row items-center justify-between gap-4 border border-[#205493]">
+            <div className="font-mono text-xs space-y-1">
+              <div className="text-[#FF9933] font-bold">📍 LOCATION COVERAGE</div>
+              <div>Betul & surrounding rural Panchayats, Madhya Pradesh</div>
+            </div>
+            <div className="font-mono text-xs space-y-1 text-right">
+              <div className="text-[#FF9933] font-bold">👥 INDIRECT BENEFICIARIES</div>
+              <div>1,000+ Rural Family & Community Members</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 4. Four Core Programme Components */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 py-16">
+        <div className="text-center max-w-3xl mx-auto mb-12">
+          <div className="inline-block px-3 py-1 bg-[#D97706]/15 border border-[#D97706]/40 text-[#B45309] font-mono text-xs font-bold tracking-widest uppercase rounded-lg mb-3">
+            ⭐ FOUR INTEGRATED PILLARS
+          </div>
+          <h2 className="text-3xl sm:text-5xl font-black uppercase text-[#163B66] font-display">
+            Our Key Operational Wings
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Pillar 1 */}
+          <div className="bg-white p-8 rounded-3xl border border-[#163B66]/15 shadow-xl border-t-8 border-[#163B66] space-y-4">
+            <div className="flex items-center justify-between">
+              <span className="px-3 py-1 bg-[#163B66] text-[#FF9933] font-mono text-xs font-bold rounded-lg uppercase">
+                PROGRAMME 01
+              </span>
+              <span className="font-mono text-xs font-bold text-[#64748B]">120 CADETS</span>
+            </div>
+            <h3 className="text-2xl font-bold font-display uppercase text-[#163B66]">
+              🇮🇳 Defence & Uniformed Services Prep
+            </h3>
+            <p className="text-xs text-[#475569] leading-relaxed">
+              Structured preparation for Army, Agniveer, MP Police, SSC GD & Paramilitary service examinations.
+            </p>
+            <ul className="text-xs font-mono text-[#334155] space-y-2 border-t pt-3 border-gray-100">
+              <li>• <strong>Academic Coaching:</strong> Mathematics, Reasoning, GK, Science, Current Affairs & Mock Tests.</li>
+              <li>• <strong>Physical Fitness:</strong> 1.6km Speed Endurance Run, Strength, Agility & Obstacle Drills.</li>
+              <li>• <strong>Career Counselling:</strong> Recruitment documentation, eligibility checks & personality building.</li>
+            </ul>
+          </div>
+
+          {/* Pillar 2 */}
+          <div className="bg-white p-8 rounded-3xl border border-[#163B66]/15 shadow-xl border-t-8 border-[#D97706] space-y-4">
+            <div className="flex items-center justify-between">
+              <span className="px-3 py-1 bg-[#D97706] text-white font-mono text-xs font-bold rounded-lg uppercase">
+                PROGRAMME 02
+              </span>
+              <span className="font-mono text-xs font-bold text-[#64748B]">75 WOMEN</span>
+            </div>
+            <h3 className="text-2xl font-bold font-display uppercase text-[#163B66]">
+              👩 Women Empowerment & Self-Reliance
+            </h3>
+            <p className="text-xs text-[#475569] leading-relaxed">
+              Creating a supportive and secure environment for women to achieve economic participation and career confidence.
+            </p>
+            <ul className="text-xs font-mono text-[#334155] space-y-2 border-t pt-3 border-gray-100">
+              <li>• <strong>Digital Literacy:</strong> Computer Fundamentals, MS Office, Social Media & Spoken English.</li>
+              <li>• <strong>Financial Literacy:</strong> Banking basics, digital payments & entrepreneurship orientation.</li>
+              <li>• <strong>Self-Defense & Fitness:</strong> Physical confidence, leadership camps & career guidance.</li>
+            </ul>
+          </div>
+
+          {/* Pillar 3 */}
+          <div className="bg-white p-8 rounded-3xl border border-[#163B66]/15 shadow-xl border-t-8 border-[#10B981] space-y-4">
+            <div className="flex items-center justify-between">
+              <span className="px-3 py-1 bg-[#10B981] text-white font-mono text-xs font-bold rounded-lg uppercase">
+                PROGRAMME 03
+              </span>
+              <span className="font-mono text-xs font-bold text-[#64748B]">75 YOUTH</span>
+            </div>
+            <h3 className="text-2xl font-bold font-display uppercase text-[#163B66]">
+              💻 Youth Skill Development & Employability
+            </h3>
+            <p className="text-xs text-[#475569] leading-relaxed">
+              Employment-oriented practical IT and vocational skills mapping to active job market requirements.
+            </p>
+            <ul className="text-xs font-mono text-[#334155] space-y-2 border-t pt-3 border-gray-100">
+              <li>• <strong>Practical IT Modules:</strong> Data Entry, Tally/GST Basics, Graphic Design & IT Support.</li>
+              <li>• <strong>Career Readiness:</strong> Resume building, interview prep & communication skills.</li>
+              <li>• <strong>Apprenticeship Linkage:</strong> Connecting trained youth with local and regional employers.</li>
+            </ul>
+          </div>
+
+          {/* Pillar 4 */}
+          <div className="bg-white p-8 rounded-3xl border border-[#163B66]/15 shadow-xl border-t-8 border-[#205493] space-y-4">
+            <div className="flex items-center justify-between">
+              <span className="px-3 py-1 bg-[#205493] text-white font-mono text-xs font-bold rounded-lg uppercase">
+                PROGRAMME 04
+              </span>
+              <span className="font-mono text-xs font-bold text-[#64748B]">30+ ATHLETES</span>
+            </div>
+            <h3 className="text-2xl font-bold font-display uppercase text-[#163B66]">
+              🏃 Sports, Fitness & Youth Leadership
+            </h3>
+            <p className="text-xs text-[#475569] leading-relaxed">
+              Fostering discipline, teamwork, confidence, and competitive sportsmanship among rural athletes.
+            </p>
+            <ul className="text-xs font-mono text-[#334155] space-y-2 border-t pt-3 border-gray-100">
+              <li>• <strong>Sports Disciplines:</strong> Athletics, Football, Volleyball & Fauji Cup BPL Cricket.</li>
+              <li>• <strong>Conditioning Camps:</strong> Physical stamina tests, nutrition awareness & team building.</li>
+              <li>• <strong>Youth Competitions:</strong> Organizing tournaments and state-level selection trials.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* 5. Implementation Model & Support Infrastructure */}
+      <section className="bg-[#0D223A] text-white py-16 border-t-4 border-[#D97706]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <div className="inline-block px-3 py-1 bg-[#163B66] text-[#FF9933] font-mono text-xs font-bold tracking-widest uppercase rounded-lg mb-3">
+              🔄 5-PHASE PROJECT IMPLEMENTATION MODEL
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-black uppercase text-white font-display">
+              From Identification to Employment Linkage
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-4 mb-12">
+            <div className="bg-[#163B66] p-5 rounded-2xl border border-[#205493] space-y-2">
+              <div className="font-mono text-xs text-[#FF9933] font-bold">PHASE 01 // M1-M2</div>
+              <div className="font-bold text-sm uppercase font-display text-white">Identification & Baseline</div>
+              <p className="text-[11px] text-gray-300">Outreach, registration, baseline survey & physical aptitude test.</p>
+            </div>
+
+            <div className="bg-[#163B66] p-5 rounded-2xl border border-[#205493] space-y-2">
+              <div className="font-mono text-xs text-[#FF9933] font-bold">PHASE 02 // M2-M10</div>
+              <div className="font-bold text-sm uppercase font-display text-white">Integrated Training</div>
+              <p className="text-[11px] text-gray-300">Academic classes, defence drills, IT skilling & physical camps.</p>
+            </div>
+
+            <div className="bg-[#163B66] p-5 rounded-2xl border border-[#205493] space-y-2">
+              <div className="font-mono text-xs text-[#FF9933] font-bold">PHASE 03 // M4-M11</div>
+              <div className="font-bold text-sm uppercase font-display text-white">Assessment System</div>
+              <p className="text-[11px] text-gray-300">Monthly written tests, physical tracking & quarterly reviews.</p>
+            </div>
+
+            <div className="bg-[#163B66] p-5 rounded-2xl border border-[#205493] space-y-2">
+              <div className="font-mono text-xs text-[#FF9933] font-bold">PHASE 04 // M6-M12</div>
+              <div className="font-bold text-sm uppercase font-display text-white">Career Linkage</div>
+              <p className="text-[11px] text-gray-300">Employer connect, job drives, apprenticeship & recruitment support.</p>
+            </div>
+
+            <div className="bg-[#163B66] p-5 rounded-2xl border border-[#205493] space-y-2">
+              <div className="font-mono text-xs text-[#FF9933] font-bold">PHASE 05 // M12</div>
+              <div className="font-bold text-sm uppercase font-display text-white">Impact Assessment</div>
+              <p className="text-[11px] text-gray-300">Endline evaluation, success stories & CSR impact reporting.</p>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="p-6 bg-[#163B66]/80 rounded-2xl border border-[#205493] space-y-3">
+              <div className="text-xs font-mono text-[#FF9933] font-bold uppercase">🖥️ DIGITAL LEARNING & RESOURCE CENTRE</div>
+              <p className="text-xs text-gray-200 leading-relaxed font-body">
+                Equipped with computer systems, high-speed internet, projector learning resources, and a physical competitive examination book bank (question papers, study guides & skill materials).
+              </p>
+            </div>
+
+            <div className="p-6 bg-[#163B66]/80 rounded-2xl border border-[#205493] space-y-3">
+              <div className="text-xs font-mono text-[#FF9933] font-bold uppercase">💼 CAREER & EMPLOYMENT SUPPORT CELL</div>
+              <p className="text-xs text-gray-200 leading-relaxed font-body">
+                Dedicated unit conducting career counselling, job mapping, resume drafting, employer linkage, and tracking selection outcomes for every enrolled youth.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 6. Management Team Grid */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 py-16">
+        <div className="text-center max-w-3xl mx-auto mb-12">
+          <div className="inline-block px-3 py-1 bg-[#163B66]/15 text-[#163B66] font-mono text-xs font-bold tracking-widest uppercase rounded-lg mb-3">
+            👥 LEADERSHIP & GOVERNING BODY
+          </div>
+          <h2 className="text-3xl sm:text-4xl font-black uppercase text-[#163B66] font-display">
+            Who Runs Mere Vatan Welfare Foundation
+          </h2>
+        </div>
+
+        <div className="grid sm:grid-cols-3 gap-6">
+          {data.management.map((m) => (
+            <div key={m.id} className="bg-white p-6 rounded-3xl border border-[#163B66]/15 shadow-md hover:shadow-xl transition-all">
+              <div className="font-mono text-xs text-[#D97706] mb-1.5 font-bold">LEADERSHIP // {m.id}</div>
+              <h3 className="text-xl font-bold uppercase font-display text-[#163B66] mb-1">{m.name}</h3>
+              <div className="text-xs font-mono text-[#D97706] font-bold mb-3">{m.role}</div>
+              <p className="text-xs font-sans text-[#475569] leading-relaxed font-medium">{m.bio}</p>
+            </div>
           ))}
-        </ul>
+        </div>
+      </section>
+
+      {/* 7. Statutory CSR Compliance Badges */}
+      <section className="bg-white py-16 border-t border-[#163B66]/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="text-center max-w-3xl mx-auto mb-10">
+            <div className="inline-block px-3 py-1 bg-[#10B981]/15 text-[#047857] font-mono text-xs font-bold tracking-widest uppercase rounded-lg mb-2">
+              📜 STATUTORY & CSR COMPLIANCE CREDENTIALS
+            </div>
+            <h2 className="text-2xl sm:text-3xl font-black uppercase text-[#163B66] font-display">
+              100% Compliant Implementing Agency
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="p-4 bg-[#F8FAFC] rounded-2xl border border-gray-200 text-center font-mono text-xs">
+              <div className="text-[#D97706] font-bold text-sm mb-1">SECTION 80G</div>
+              <div className="text-[#64748B]">Tax Exemption Certificate</div>
+            </div>
+            <div className="p-4 bg-[#F8FAFC] rounded-2xl border border-gray-200 text-center font-mono text-xs">
+              <div className="text-[#163B66] font-bold text-sm mb-1">SECTION 12A / 12AB</div>
+              <div className="text-[#64748B]">Income Tax Registration</div>
+            </div>
+            <div className="p-4 bg-[#F8FAFC] rounded-2xl border border-gray-200 text-center font-mono text-xs">
+              <div className="text-[#10B981] font-bold text-sm mb-1">MCA CSR-1</div>
+              <div className="text-[#64748B]">CSR Implementing Registration</div>
+            </div>
+            <div className="p-4 bg-[#F8FAFC] rounded-2xl border border-gray-200 text-center font-mono text-xs">
+              <div className="text-[#163B66] font-bold text-sm mb-1">SCHEDULE VII</div>
+              <div className="text-[#64748B]">Education, Skills & Sports Aligned</div>
+            </div>
+          </div>
+
+          <div className="mt-8 text-center">
+            <Link
+              href="/documents"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-[#163B66] text-white font-mono text-xs font-bold uppercase rounded-xl hover:bg-[#0D223A] transition-colors"
+            >
+              <span>📜 VIEW ALL NGO COMPLIANCE DOCUMENTS & CERTIFICATES</span>
+            </Link>
+          </div>
+        </div>
       </section>
     </div>
   );
 }
+

@@ -94,21 +94,21 @@
   "management": [
     {
       "id": "mg1",
-      "name": "Col. (Retd.) R. P. Singh",
-      "role": "President",
-      "bio": "20 years in the Indian Army, now leads our Army Training wing."
+      "name": "Ashok Raghuwanshi",
+      "role": "Founder & President",
+      "bio": "Founder & President of Mere Vatan Welfare Foundation, Betul. Directing Mission Yuva Shakti, defence coaching, youth empowerment, and rural development initiatives."
     },
     {
       "id": "mg2",
-      "name": "Anjali Sharma",
-      "role": "Secretary, Women Empowerment",
-      "bio": "Former skill-development officer; runs the women's skilling programs."
+      "name": "Smt. Sunita Raghuwanshi",
+      "role": "Secretary & Women Empowerment Lead",
+      "bio": "Directing women self-reliance workshops, computer literacy, vocational skill programs, and career counselling."
     },
     {
       "id": "mg3",
-      "name": "Vikram Rathore",
-      "role": "Sports Coordinator",
-      "bio": "State-level athlete turned coach for the Sports & Fitness wing."
+      "name": "Subedar (Retd.) R. S. Verma",
+      "role": "Chief Defence Physical Instructor",
+      "bio": "Ex-Indian Army drill instructor leading 1.6km speed endurance drills, obstacle courses, and physical fitness assessments."
     }
   ],
   "donors": [
@@ -144,7 +144,7 @@
     },
     {
       "id": "d_1787130105829_6283",
-      "name": " bv bv ",
+      "name": "CSR Contributor",
       "amount": 45678,
       "date": "2026-08-19"
     }
@@ -172,7 +172,7 @@
       "id": "don_1787130105829_2384",
       "date": "2026-08-19",
       "receiptNo": "RCPT-2026-0003",
-      "donorName": " bv bv ",
+      "donorName": "CSR Contributor",
       "email": "",
       "amount": 45678,
       "purpose": "General Fund"
@@ -192,9 +192,11 @@
   ],
   "contactMessages": [],
   "objectives": [
-    "Prepare rural and semi-urban youth for Army and defence recruitment through physical and written training.",
-    "Equip women with market-ready vocational skills for financial independence.",
-    "Promote sports and fitness as a path to discipline, health and opportunity.",
-    "Build a transparent, community-driven organisation trusted by donors and government bodies alike."
+    "Integrated Defence & Uniformed Services Career Prep: Prepare 120 rural youth for Army, Police, and paramilitary entrance through structured physical drills and academic coaching.",
+    "Women Empowerment & Career Development: Train 75 women in computer fundamentals, MS Office, spoken English, leadership, and financial independence.",
+    "Youth Skill Development & Employability: Provide 75 youth with employment-oriented IT skills, Tally/GST, digital marketing, and apprenticeship linkages.",
+    "Sports, Fitness & Youth Leadership: Engage 30+ athletes in athletics, Fauji Cup BPL tournaments, physical camps, and leadership building.",
+    "Digital Learning & Career Support Cell: Operate a modern digital learning lab, competitive exam book bank, and employer linkage cell in Betul.",
+    "Transparent CSR Implementation: Maintain 100% compliance under MCA Schedule VII, 12A/12AB, 80G tax exemption, and CSR-1 registration."
   ]
 }
