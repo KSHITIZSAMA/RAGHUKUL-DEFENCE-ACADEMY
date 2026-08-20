@@ -76,36 +76,36 @@ export default function GallerySection() {
       : GALLERY_ITEMS.filter((item) => item.category === activeCategory);
 
   return (
-    <section id="gallery" className="py-20 bg-[#E5E7DF] border-b border-[#BDC1B3] scroll-mt-24">
+    <section id="gallery" className="py-20 bg-[#F4F6F9] border-b-2 border-[#163B66]/15 scroll-mt-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
 
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-10">
           <div>
-            <div className="font-mono text-xs text-[#3F4632] tracking-widest uppercase mb-2">
-              // PHOTO GALLERY & DOCUMENTATION
+            <div className="inline-block px-3 py-1 bg-[#D97706]/15 border border-[#D97706]/40 text-[#B45309] font-mono text-xs font-bold tracking-widest uppercase rounded-lg mb-3">
+              📸 PHOTO GALLERY & DOCUMENTATION
             </div>
-            <h2 className="text-3xl sm:text-5xl font-black uppercase tracking-tight text-[#181B15] font-display">
+            <h2 className="text-3xl sm:text-5xl font-black uppercase tracking-tight text-[#163B66] font-display">
               MOMENTS FROM THE GROUND
             </h2>
           </div>
-          <p className="text-xs sm:text-sm font-mono text-[#5E6553] max-w-md mt-3 md:mt-0 uppercase font-semibold">
-            Visual records of morning drills, vocational batches, and athletic selection camps.
+          <p className="text-xs sm:text-sm font-mono text-[#64748B] max-w-md mt-3 md:mt-0 uppercase font-semibold">
+            Visual records of morning drills, vocational workshops, and athletic selection camps.
           </p>
         </div>
 
         {/* Category Filter Tabs */}
-        <div className="flex flex-wrap gap-2 sm:gap-3 mb-10 border-b border-[#BDC1B3] pb-4">
+        <div className="flex flex-wrap gap-2.5 sm:gap-3 mb-10 border-b border-gray-200 pb-5">
           {CATEGORIES.map((cat) => (
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`px-4 py-2 text-xs font-mono font-bold tracking-wider uppercase transition-all tactical-cut-br ${activeCategory === cat
-                  ? "bg-[#3F4632] text-white shadow-md"
-                  : "bg-[#F4F5F1] text-[#181B15] border border-[#BDC1B3] hover:bg-[#3F4632]/10"
+              className={`px-5 py-2.5 text-xs font-mono font-bold tracking-wider uppercase transition-all rounded-xl ${activeCategory === cat
+                  ? "bg-[#163B66] text-white shadow-lg border-b-2 border-[#D97706]"
+                  : "bg-white text-[#334155] border border-gray-200 hover:bg-[#163B66] hover:text-white"
                 }`}
             >
-              {cat === "ALL" ? "// SHOW ALL" : cat}
+              {cat === "ALL" ? "• SHOW ALL" : cat}
             </button>
           ))}
         </div>
@@ -116,35 +116,37 @@ export default function GallerySection() {
             <div
               key={item.id}
               onClick={() => setActiveItem(item)}
-              className="bg-[#F4F5F1] tactical-cut-br overflow-hidden border border-[#BDC1B3] shadow-md group cursor-pointer hover:border-[#3F4632] hover:shadow-xl transition-all relative"
+              className="bg-white rounded-3xl overflow-hidden border border-[#163B66]/15 shadow-md group cursor-pointer hover:border-[#D97706] hover:shadow-2xl transition-all relative flex flex-col justify-between"
             >
               {/* Image Thumbnail with Overlay */}
-              <div className="relative h-60 w-full overflow-hidden bg-[#1E2318]">
+              <div className="relative h-60 w-full overflow-hidden bg-[#071526]">
                 <Image
                   src={item.src}
                   alt={item.caption}
                   fill
                   className="object-cover object-center group-hover:scale-105 transition-transform duration-500 filter contrast-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#181B15]/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#071526]/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
 
                 {/* Category Pill Tag */}
-                <div className="absolute top-3 left-3 px-2.5 py-1 bg-[#3F4632]/95 backdrop-blur-md text-[#C98E2A] font-mono text-[10px] font-bold uppercase tracking-widest tactical-cut-br border border-[#586248]">
+                <div className="absolute top-3 left-3 px-3 py-1 bg-[#163B66]/90 backdrop-blur-md text-[#FF9933] font-mono text-[10px] font-bold uppercase tracking-widest rounded-full border border-[#D97706]/40 shadow-md">
                   {item.category}
                 </div>
               </div>
 
               {/* Card Footer Details */}
-              <div className="p-4 bg-[#F4F5F1]">
-                <div className="text-[10px] font-mono text-[#C98E2A] font-bold mb-1">
-                  {item.batchDate}
+              <div className="p-5 bg-white flex-1 flex flex-col justify-between">
+                <div>
+                  <div className="text-[10px] font-mono text-[#D97706] font-bold mb-1.5">
+                    {item.batchDate}
+                  </div>
+                  <h3 className="text-sm font-bold uppercase font-mono text-[#0F172A] group-hover:text-[#163B66] transition-colors leading-snug">
+                    {item.caption}
+                  </h3>
                 </div>
-                <h3 className="text-sm font-bold uppercase font-mono text-[#181B15] group-hover:text-[#3F4632] transition-colors leading-snug">
-                  {item.caption}
-                </h3>
-                <div className="flex items-center justify-between mt-3 text-[11px] font-mono text-[#5E6553] pt-2 border-t border-[#BDC1B3]/60">
+                <div className="flex items-center justify-between mt-4 text-[11px] font-mono text-[#64748B] pt-3 border-t border-gray-100">
                   <span>📍 {item.location}</span>
-                  <span className="text-[#3F4632] font-bold">[ VIEW ]</span>
+                  <span className="text-[#D97706] font-bold hover:underline">[ PREVIEW ]</span>
                 </div>
               </div>
             </div>

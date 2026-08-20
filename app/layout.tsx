@@ -24,7 +24,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="antialiased bg-[#E5E7DF] text-[#181B15] selection:bg-[#3F4632] selection:text-white pb-16 lg:pb-0">
+      <body className="antialiased bg-[#F4F6F9] text-[#0F172A] selection:bg-[#D97706] selection:text-white pb-16 lg:pb-0">
         <CustomCursor />
         <SiteHeader />
         <main>{children}</main>
