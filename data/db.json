@@ -153,6 +153,12 @@
       "name": "anshul sharma",
       "amount": 1000,
       "date": "2026-08-20"
+    },
+    {
+      "id": "d_1787225912083_6530",
+      "name": "anshul sharma",
+      "amount": 1017,
+      "date": "2026-08-20"
     }
   ],
   "donations": [
@@ -190,6 +196,15 @@
       "donorName": "anshul sharma",
       "email": "kshitiz007singh@gmail.com",
       "amount": 1000,
+      "purpose": "General Foundation Welfare Fund"
+    },
+    {
+      "id": "don_1787225912083_93",
+      "date": "2026-08-20",
+      "receiptNo": "RCPT-2026-0005",
+      "donorName": "anshul sharma",
+      "email": "kshitiz007singh@gmail.com",
+      "amount": 1017,
       "purpose": "General Foundation Welfare Fund"
     }
   ],

@@ -11,11 +11,12 @@ export default function DonatePage() {
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    const formEl = e.currentTarget;
     setStatus("loading");
     setErrorMsg("");
     setDownloadUrl(null);
 
-    const form = new FormData(e.currentTarget);
+    const form = new FormData(formEl);
     const payload = {
       donorName: form.get("donorName"),
       email: form.get("email"),
@@ -49,9 +50,10 @@ export default function DonatePage() {
       a.remove();
 
       setStatus("done");
-      e.currentTarget.reset();
-    } catch {
-      setErrorMsg("Network error. Please try again.");
+      formEl.reset();
+    } catch (err) {
+      console.error("Donation submission error:", err);
+      setErrorMsg("Error completing donation. Please try again.");
       setStatus("error");
     }
   }
