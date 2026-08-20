@@ -55,11 +55,11 @@ const GALLERY_ITEMS: GalleryItem[] = [
   },
   {
     id: "g6",
-    caption: "High Jump, Endurance Sprint & Team Physical Coaching Camp",
+    caption: "Fauji Cup BPL Cricket Tournament Man of the Match & Trophy Presentation",
     category: "Sports & Fitness",
-    src: "/images/gallery-sports.png",
-    batchDate: "TRIALS 2026 // ATHLETIC TEAM",
-    location: "District Pavilion & Sports Stadium",
+    src: "/images/gallery-fauji-cup.jpg",
+    batchDate: "TOURNAMENT 2026 // FAUJI CUP BPL",
+    location: "Betul Premier League Sports Arena",
   },
 ];
 
