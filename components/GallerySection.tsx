@@ -173,22 +173,22 @@ export default function GallerySection() {
       {activeItem && (
         <div
           onClick={() => setActiveItem(null)}
-          className="fixed inset-0 z-50 bg-[#181B15]/90 backdrop-blur-md flex items-center justify-center p-4 sm:p-8 animate-fadeIn"
+          className="fixed inset-0 z-50 bg-[#071526]/95 backdrop-blur-md flex items-center justify-center p-4 sm:p-8 animate-fadeIn"
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className="bg-[#F4F5F1] max-w-4xl w-full border-2 border-[#3F4632] tactical-cut-br shadow-2xl overflow-hidden relative"
+            className="bg-[#0D223A] max-w-4xl w-full border-2 border-[#D97706] rounded-3xl shadow-2xl overflow-hidden relative"
           >
             {/* Close Button */}
             <button
               onClick={() => setActiveItem(null)}
-              className="absolute top-4 right-4 z-20 w-10 h-10 bg-[#3F4632] text-white flex items-center justify-center font-mono font-bold text-lg hover:bg-[#C98E2A] hover:text-[#181B15] transition-colors tactical-cut-br shadow-lg"
+              className="absolute top-4 right-4 z-20 w-10 h-10 bg-[#D97706] text-white flex items-center justify-center font-mono font-bold text-lg hover:bg-[#B45309] transition-colors rounded-xl shadow-lg"
             >
               ✕
             </button>
 
             {/* Expanded Photo */}
-            <div className="relative h-[60vh] min-h-[320px] w-full bg-[#1E2318]">
+            <div className="relative h-[60vh] min-h-[320px] w-full bg-[#071526]">
               <Image
                 src={activeItem.src}
                 alt={activeItem.caption}
@@ -198,20 +198,20 @@ export default function GallerySection() {
             </div>
 
             {/* Modal Photo Details */}
-            <div className="p-6 bg-[#3F4632] text-white flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-t-2 border-[#C98E2A]">
+            <div className="p-6 bg-[#163B66] text-white flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-t-4 border-[#D97706]">
               <div>
-                <div className="font-mono text-xs text-[#C98E2A] font-bold uppercase tracking-wider mb-1">
-                  // {activeItem.category} — {activeItem.batchDate}
+                <div className="font-mono text-xs text-[#FF9933] font-bold uppercase tracking-wider mb-1">
+                  • {activeItem.category} — {activeItem.batchDate}
                 </div>
                 <h3 className="text-xl font-bold uppercase font-display text-white">
                   {activeItem.caption}
                 </h3>
-                <p className="text-xs font-mono text-[#CFD3C7] mt-1">📍 {activeItem.location}</p>
+                <p className="text-xs font-mono text-[#E2E8F0] mt-1">📍 {activeItem.location}</p>
               </div>
 
               <button
                 onClick={() => setActiveItem(null)}
-                className="px-6 py-2.5 bg-[#C98E2A] text-[#181B15] font-mono text-xs font-bold uppercase tracking-wider hover:bg-white transition-colors tactical-cut-br shrink-0"
+                className="px-6 py-3 bg-[#D97706] text-white font-mono text-xs font-bold uppercase tracking-wider hover:bg-[#B45309] transition-colors rounded-xl border-b-4 border-[#B45309] shrink-0 shadow-md"
               >
                 CLOSE PREVIEW
               </button>
