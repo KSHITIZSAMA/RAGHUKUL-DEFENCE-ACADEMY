@@ -231,41 +231,31 @@ export function CinematicFooter() {
     if (typeof window === "undefined") return;
     if (!wrapperRef.current) return;
 
-    // React strict mode compatible GSAP context cleanup
     const ctx = gsap.context(() => {
       // Background Parallax
-      gsap.fromTo(
-        giantTextRef.current,
-        { y: "10vh", scale: 0.8, opacity: 0 },
-        {
-          y: "0vh",
-          scale: 1,
-          opacity: 1,
-          ease: "power1.out",
-          scrollTrigger: {
-            trigger: wrapperRef.current,
-            start: "top 80%",
-            end: "bottom bottom",
-            scrub: 1,
-          },
-        }
-      );
+      if (giantTextRef.current) {
+        gsap.fromTo(
+          giantTextRef.current,
+          { y: 30, opacity: 0.1 },
+          {
+            y: 0,
+            opacity: 0.15,
+            duration: 1,
+            ease: "power1.out",
+          }
+        );
+      }
 
-      // Staggered Content Reveal
+      // Content Reveal
       gsap.fromTo(
         [headingRef.current, linksRef.current],
-        { y: 50, opacity: 0 },
+        { y: 20, opacity: 0 },
         {
           y: 0,
           opacity: 1,
           stagger: 0.15,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: wrapperRef.current,
-            start: "top 40%",
-            end: "bottom bottom",
-            scrub: 1,
-          },
+          duration: 0.6,
+          ease: "power2.out",
         }
       );
     }, wrapperRef);
