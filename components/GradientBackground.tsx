@@ -7,25 +7,29 @@ export function GradientBackground({ className }: { className?: string }) {
       className={className}
       style={{
         position: "fixed",
-        inset: 0,
-        overflow: "hidden",
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
         width: "100vw",
         height: "100vh",
         pointerEvents: "none",
         zIndex: -1,
+        overflow: "hidden",
       }}
     >
+      {/* 21st.dev Multi-stop Linear Gradient Layer */}
       <div
         style={{
           position: "absolute",
           inset: 0,
           backgroundColor: "#EBF9FF",
           backgroundImage:
-            "url(\"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='0.110'/></svg>\"), linear-gradient(0deg, #EBF9FF 38%, #57D2F4 61%, #1B6AA7 81%, #031C26 97%)",
-          backgroundSize: "120px 120px, auto",
-          backgroundBlendMode: "overlay, normal",
+            "linear-gradient(0deg, #EBF9FF 38%, #57D2F4 61%, #1B6AA7 81%, #031C26 97%)",
         }}
       />
+
+      {/* 21st.dev Grain Noise SVG Overlay */}
       <svg
         aria-hidden="true"
         style={{
