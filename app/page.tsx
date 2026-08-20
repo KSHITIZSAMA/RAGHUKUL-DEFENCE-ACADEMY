@@ -19,103 +19,161 @@ export default function Home() {
       {/* ------------------------------------------------------------------------- */}
       {/* 1. HERO SECTION (id="hero") — MILIDECK "X" Framed Photo & 98+ Recruitment Stats */}
       {/* ------------------------------------------------------------------------- */}
-      <section id="hero" className="relative bg-[#E5E7DF] text-[#181B15] overflow-hidden border-b border-[#BDC1B3] py-6 sm:py-10 scroll-mt-24">
+      {/* ------------------------------------------------------------------------- */}
+      {/* 1. HERO SECTION (id="hero") — Modern NGO Prestige Hero Layout */}
+      {/* ------------------------------------------------------------------------- */}
+      <section id="hero" className="relative bg-gradient-to-b from-[#F4F6F9] via-[#E2E8F0] to-[#F4F6F9] text-[#0F172A] overflow-hidden border-b-2 border-[#163B66]/20 py-10 lg:py-16 scroll-mt-24">
         
-        {/* Bottom Theme Color Area (Dark Military Olive #3F4632) */}
-        <div className="absolute inset-x-0 bottom-0 h-[140px] sm:h-[160px] lg:h-[175px] bg-[#3F4632] z-0 pointer-events-none" />
+        {/* Background Ambient Radiance & Tri-Color Strip */}
+        <div className="absolute top-0 inset-x-0 h-1.5 flex z-30">
+          <span className="w-1/3 bg-[#FF9933]" />
+          <span className="w-1/3 bg-[#163B66]" />
+          <span className="w-1/3 bg-[#10B981]" />
+        </div>
+        <div className="absolute top-1/4 -left-32 w-96 h-96 bg-[#163B66]/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-10 right-1/4 w-96 h-96 bg-[#D97706]/15 rounded-full blur-3xl pointer-events-none" />
 
         <div className="mx-auto max-w-7xl px-4 sm:px-6 relative z-10">
-          <div className="grid lg:grid-cols-12 gap-8 items-center min-h-[500px]">
+          
+          {/* Top Live Trust Pill */}
+          <div className="mb-6 inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-[#FFFFFF] border border-[#163B66]/20 shadow-md">
+            <span className="w-2.5 h-2.5 rounded-full bg-[#10B981] animate-pulse" />
+            <span className="text-xs font-mono font-bold tracking-widest text-[#163B66] uppercase">
+              REGISTERED NGO #12A/80G • GOVT DARPAN ID: RJ/2024/0488921
+            </span>
+          </div>
+
+          <div className="grid lg:grid-cols-12 gap-10 items-center">
             
-            {/* Left Column: NGO Boxed Title + Subtitle + Action Buttons */}
-            <div className="lg:col-span-6 flex flex-col justify-between space-y-6">
-              <div className="space-y-6 pt-2">
-                
-                {/* Title Highlight Box */}
-                <div className="space-y-2">
-                  <div className="milideck-title-box">
-                    <h1 className="text-4xl sm:text-6xl font-black uppercase tracking-wider text-[#163B66] leading-none font-display">
-                      MERE VATAN
-                    </h1>
-                  </div>
-                  <div className="text-2xl sm:text-4xl font-extrabold uppercase tracking-tight text-[#0F172A] leading-tight font-display">
-                    WELFARE FOUNDATION
-                  </div>
-                  {/* Theme Accent Tri-Color NGO Line Strip */}
-                  <div className="w-36 h-1.5 flex my-3 rounded-full overflow-hidden shadow-xs">
-                    <span className="w-1/3 bg-[#FF9933]" />
-                    <span className="w-1/3 bg-[#163B66]" />
-                    <span className="w-1/3 bg-[#138808]" />
-                  </div>
-                </div>
+            {/* Left Column: Mission, Title & CTAs */}
+            <div className="lg:col-span-7 space-y-6">
+              
+              {/* Saffron Pill */}
+              <div className="inline-block px-3.5 py-1 bg-[#D97706]/15 border border-[#D97706]/40 text-[#B45309] font-mono text-xs font-bold tracking-widest uppercase rounded-lg">
+                🇮🇳 NATION FIRST • COMMUNITY ALWAYS
+              </div>
 
-                {/* Subtitle */}
-                <p className="text-xs sm:text-sm font-body text-[#475569] tracking-wide uppercase max-w-md leading-relaxed font-semibold">
-                  Empowering Youth for Defence Services, Women Livelihoods & Community Sports Excellence Across India.
-                </p>
-
-                {/* Action CTA Buttons */}
-                <div className="flex flex-wrap gap-3 pt-2">
-                  <Link
-                    href="/membership"
-                    className="px-6 py-3.5 bg-[#D97706] text-white font-mono text-xs font-bold tracking-widest uppercase hover:bg-[#B45309] transition-all shadow-md rounded-xl flex items-center gap-2"
-                  >
-                    <span>JOIN AS VOLUNTEER / CADET</span>
-                  </Link>
-                  <ScrollButton
-                    targetId="about"
-                    className="px-6 py-3.5 border-2 border-[#163B66] text-[#163B66] font-mono text-xs font-bold tracking-widest uppercase hover:bg-[#163B66] hover:text-white transition-all rounded-xl"
-                  >
-                    OUR MISSION & IMPACT ↓
-                  </ScrollButton>
+              {/* High-Impact Dual Tone Heading */}
+              <div className="space-y-1">
+                <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black uppercase tracking-tight text-[#163B66] leading-[1.05] font-display">
+                  MERE VATAN
+                </h1>
+                <div className="text-2xl sm:text-4xl lg:text-5xl font-extrabold uppercase tracking-tight text-[#D97706] leading-tight font-display">
+                  WELFARE FOUNDATION
                 </div>
               </div>
 
-              {/* Bottom Left NGO Navy Impact Box */}
-              <div className="bg-[#163B66] text-white p-5 sm:p-6 shadow-xl flex items-center gap-6 border-l-6 border-[#D97706] max-w-xl rounded-2xl border-t border-b border-r border-[#205493]">
+              {/* Subtext */}
+              <p className="text-sm sm:text-base font-body text-[#334155] tracking-wide max-w-2xl leading-relaxed font-medium">
+                Dedicated to free physical defence entrance training, women self-reliance & vocational empowerment, youth sports excellence, and community environmental welfare across India.
+              </p>
+
+              {/* Action Buttons */}
+              <div className="flex flex-wrap gap-4 pt-2">
+                <Link
+                  href="/membership"
+                  className="px-7 py-4 bg-[#D97706] text-white font-mono text-xs font-bold tracking-widest uppercase hover:bg-[#B45309] transition-all shadow-xl hover:shadow-2xl rounded-xl flex items-center gap-2 border-b-4 border-[#B45309] group"
+                >
+                  <span>JOIN AS VOLUNTEER / CADET</span>
+                  <span className="text-[#FF9933] group-hover:translate-x-1 transition-transform">→</span>
+                </Link>
+                <Link
+                  href="/donate"
+                  className="px-7 py-4 bg-[#163B66] text-white font-mono text-xs font-bold tracking-widest uppercase hover:bg-[#0D223A] transition-all shadow-xl rounded-xl flex items-center gap-2 border-b-4 border-[#0D223A]"
+                >
+                  <span>❤ DONATE (80G TAX EXEMPT)</span>
+                </Link>
+                <ScrollButton
+                  targetId="about"
+                  className="px-6 py-4 bg-white border-2 border-[#163B66]/30 text-[#163B66] font-mono text-xs font-bold tracking-widest uppercase hover:bg-[#163B66] hover:text-white transition-all rounded-xl shadow-sm"
+                >
+                  OUR IMPACT ↓
+                </ScrollButton>
+              </div>
+
+              {/* Impact Stat Banner */}
+              <div className="mt-8 bg-[#163B66] text-white p-5 sm:p-6 shadow-2xl flex items-center gap-5 border-l-8 border-[#D97706] rounded-2xl border border-[#205493]/60 relative overflow-hidden">
                 <div className="text-4xl sm:text-5xl font-mono font-extrabold text-[#FF9933] shrink-0">
                   <StatCounter end={98} suffix="+" />
                 </div>
-                <div className="text-[11px] font-mono tracking-wider text-[#E2E8F0] leading-relaxed uppercase font-semibold">
-                  QUALIFIED CANDIDATES & SUCCESSFUL DEFENCE SELECTIONS ACROSS ARMY, POLICE & ATHLETIC TRIALS.
+                <div>
+                  <div className="text-xs font-mono font-bold text-[#FF9933] uppercase tracking-widest">
+                    DEFENCE SELECTIONS & QUALIFIED CADETS
+                  </div>
+                  <div className="text-xs font-mono text-[#E2E8F0] leading-relaxed uppercase mt-0.5 font-medium">
+                    Young men & women successfully recruited into Army, Police & Athletic Teams.
+                  </div>
                 </div>
               </div>
 
             </div>
 
-            {/* Right Column: Hero Section "X" Shaped Image Frame */}
-            <div className="lg:col-span-6 relative min-h-[380px] sm:min-h-[480px] lg:min-h-[520px] flex items-center justify-center">
-              
-              {/* Outer X-Framed Image Container */}
-              <div className="w-full h-full relative min-h-[380px] sm:min-h-[480px] hero-x-frame shadow-2xl bg-[#0D223A] border-2 border-[#163B66]">
+            {/* Right Column: Officer Frame Showcase */}
+            <div className="lg:col-span-5 relative flex justify-center lg:justify-end">
+              <div className="relative w-full max-w-md lg:max-w-none">
                 
-                <div className="absolute inset-0 tech-grid-dark opacity-30 z-10 pointer-events-none" />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0D223A]/70 via-transparent to-[#0D223A]/30 z-10 pointer-events-none" />
+                {/* Glow ring */}
+                <div className="absolute -inset-2 rounded-3xl bg-gradient-to-tr from-[#163B66] via-[#D97706] to-[#10B981] opacity-30 blur-lg animate-pulse" />
+                
+                {/* Main Card */}
+                <div className="relative bg-[#0D223A] border-4 border-[#163B66] rounded-3xl overflow-hidden shadow-2xl p-2.5">
+                  <div className="relative h-[480px] sm:h-[540px] w-full rounded-2xl overflow-hidden bg-[#071526]">
+                    <Image
+                      src="/images/hero-officer.png"
+                      alt="Mere Vatan Welfare Foundation Leadership & Defence Mentorship"
+                      fill
+                      priority
+                      className="object-cover object-top filter contrast-105 brightness-100 transform hover:scale-105 transition-transform duration-700"
+                    />
 
-                <Image
-                  src="/images/hero-cadet.png"
-                  alt="Mere Vatan Welfare Foundation Leadership & Defence Officer Mentorship"
-                  fill
-                  priority
-                  className="object-cover object-top filter contrast-105 brightness-95"
-                />
+                    {/* Top Floating Badge */}
+                    <div className="absolute top-4 left-4 z-20">
+                      <div className="px-3.5 py-1.5 bg-[#163B66]/90 backdrop-blur-md border border-[#D97706]/60 text-white font-mono text-[10px] uppercase font-bold tracking-widest rounded-xl shadow-lg flex items-center gap-2">
+                        <span className="text-[#FF9933]">🎖️</span>
+                        <span>DEFENCE MENTORSHIP</span>
+                      </div>
+                    </div>
 
-                <div className="absolute bottom-6 right-8 z-20 hidden sm:block">
-                  <div className="px-3.5 py-1.5 bg-[#163B66]/90 backdrop-blur-sm border border-[#D97706]/60 text-white font-mono text-[10px] uppercase tracking-widest rounded-xl shadow-lg">
-                    REGISTERED NGO #12A/80G // MERE VATAN
+                    {/* Bottom Floating Card */}
+                    <div className="absolute bottom-4 inset-x-4 z-20">
+                      <div className="p-4 bg-[#163B66]/90 backdrop-blur-md border border-[#D97706]/50 rounded-xl text-white shadow-xl">
+                        <div className="flex items-center justify-between font-mono text-[11px] font-bold text-[#FF9933] uppercase tracking-wider mb-1">
+                          <span>FOUNDATION LEADERSHIP</span>
+                          <span className="bg-[#D97706] text-white px-2 py-0.5 rounded text-[9px]">OFFICER MENTOR</span>
+                        </div>
+                        <p className="text-xs font-mono text-gray-200 leading-snug font-semibold">
+                          Guiding youth towards national service, discipline, physical agility & moral integrity.
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
 
-                <div 
-                  className="absolute right-0 top-1/2 -translate-y-1/2 w-8 h-16 bg-[#E5E7DF] z-20 pointer-events-none"
-                  style={{ clipPath: "polygon(100% 0, 0 50%, 100% 100%)" }}
-                />
-
               </div>
-
             </div>
 
           </div>
+
+          {/* Bottom 4-Item Quick Trust Metrics Bar */}
+          <div className="mt-14 grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="p-4 bg-white/80 backdrop-blur-sm border border-[#163B66]/15 rounded-2xl shadow-sm text-center">
+              <div className="text-2xl font-black font-mono text-[#163B66]">98+</div>
+              <div className="text-[11px] font-mono font-bold text-[#64748B] uppercase mt-0.5">Defence Selections</div>
+            </div>
+            <div className="p-4 bg-white/80 backdrop-blur-sm border border-[#163B66]/15 rounded-2xl shadow-sm text-center">
+              <div className="text-2xl font-black font-mono text-[#D97706]">100%</div>
+              <div className="text-[11px] font-mono font-bold text-[#64748B] uppercase mt-0.5">80G Tax Exempt</div>
+            </div>
+            <div className="p-4 bg-white/80 backdrop-blur-sm border border-[#163B66]/15 rounded-2xl shadow-sm text-center">
+              <div className="text-2xl font-black font-mono text-[#10B981]">500+</div>
+              <div className="text-[11px] font-mono font-bold text-[#64748B] uppercase mt-0.5">Trees Planted</div>
+            </div>
+            <div className="p-4 bg-white/80 backdrop-blur-sm border border-[#163B66]/15 rounded-2xl shadow-sm text-center">
+              <div className="text-2xl font-black font-mono text-[#163B66]">340+</div>
+              <div className="text-[11px] font-mono font-bold text-[#64748B] uppercase mt-0.5">Youth Empowered</div>
+            </div>
+          </div>
+
         </div>
       </section>
 
