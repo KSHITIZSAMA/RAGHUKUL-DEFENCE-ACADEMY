@@ -274,6 +274,10 @@ export function CinematicFooter() {
   }, []);
 
   const handleScrollTo = (id: string) => {
+    if (typeof window !== "undefined" && window.location.pathname !== "/") {
+      window.location.href = `/#${id}`;
+      return;
+    }
     const elem = document.getElementById(id);
     if (elem) {
       const headerOffset = 90;
@@ -283,8 +287,6 @@ export function CinematicFooter() {
         top: offsetPosition,
         behavior: "smooth",
       });
-    } else {
-      window.location.href = `/#${id}`;
     }
   };
 
@@ -296,40 +298,31 @@ export function CinematicFooter() {
     <>
       <style dangerouslySetInnerHTML={{ __html: STYLES }} />
 
-      {/* 
-        The "Curtain Reveal" Wrapper:
-        It sits in standard flow. Because it has clip-path, its contents
-        are ONLY visible within its bounding box. 
-      */}
-      <div
+      <footer
         ref={wrapperRef}
-        className="relative h-screen w-full mt-12"
-        style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
+        className="relative w-full min-h-[600px] flex flex-col justify-between overflow-hidden bg-[#0D223A] text-white cinematic-footer-wrapper border-t-4 border-[#D97706] pt-16 pb-8"
       >
-        {/* The actual footer stays fixed to the viewport underneath everything */}
-        <footer className="fixed bottom-0 left-0 flex h-screen w-full flex-col justify-between overflow-hidden bg-[#161912] text-white cinematic-footer-wrapper border-t-4 border-[#3F4632]">
+        {/* Ambient Light & Grid Background */}
+        <div className="footer-aurora absolute left-1/2 top-1/2 h-[60vh] w-[80vw] -translate-x-1/2 -translate-y-1/2 animate-footer-breathe rounded-[50%] blur-[80px] pointer-events-none z-0" />
+        <div className="footer-bg-grid absolute inset-0 z-0 pointer-events-none" />
 
-          {/* Ambient Light & Grid Background */}
-          <div className="footer-aurora absolute left-1/2 top-1/2 h-[60vh] w-[80vw] -translate-x-1/2 -translate-y-1/2 animate-footer-breathe rounded-[50%] blur-[80px] pointer-events-none z-0" />
-          <div className="footer-bg-grid absolute inset-0 z-0 pointer-events-none" />
+        {/* Giant background text */}
+        <div
+          ref={giantTextRef}
+          className="footer-giant-bg-text absolute -bottom-[2vh] left-1/2 -translate-x-1/2 whitespace-nowrap z-0 pointer-events-none select-none font-display uppercase"
+        >
+          MERE VATAN
+        </div>
 
-          {/* Giant background text */}
-          <div
-            ref={giantTextRef}
-            className="footer-giant-bg-text absolute -bottom-[5vh] left-1/2 -translate-x-1/2 whitespace-nowrap z-0 pointer-events-none select-none font-display uppercase"
-          >
-            MERE VATAN
+        {/* 1. Sleek Continuous Marquee Ticker */}
+        <div className="w-full overflow-hidden border-y border-[#205493] bg-[#071526]/90 backdrop-blur-md py-3 z-20 shadow-2xl mb-12">
+          <div className="flex w-max animate-footer-scroll-marquee text-xs md:text-sm font-bold tracking-[0.25em] text-[#CFD3C7] uppercase font-mono">
+            <MarqueeItem />
+            <MarqueeItem />
+            <MarqueeItem />
+            <MarqueeItem />
           </div>
-
-          {/* 1. Sleek Continuous Marquee Ticker (Positioned safely near top of footer) */}
-          <div className="absolute top-4 sm:top-8 left-0 w-full overflow-hidden border-y border-[#3F4632] bg-[#161912]/90 backdrop-blur-md py-3 z-20 shadow-2xl">
-            <div className="flex w-max animate-footer-scroll-marquee text-xs md:text-sm font-bold tracking-[0.25em] text-[#CFD3C7] uppercase font-mono">
-              <MarqueeItem />
-              <MarqueeItem />
-              <MarqueeItem />
-              <MarqueeItem />
-            </div>
-          </div>
+        </div>
 
           {/* 2. Main Center Content */}
           <div className="relative z-10 flex flex-1 flex-col items-center justify-center px-6 mt-20 sm:mt-24 w-full max-w-5xl mx-auto">
@@ -438,7 +431,6 @@ export function CinematicFooter() {
 
           </div>
         </footer>
-      </div>
     </>
   );
 }

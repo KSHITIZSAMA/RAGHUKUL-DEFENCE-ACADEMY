@@ -25,10 +25,11 @@ export async function POST(req: Request) {
   const pdfBuffer: Buffer = await new Promise((resolve) => {
     doc.on("end", () => resolve(Buffer.concat(chunks)));
 
-    doc.fontSize(18).fillColor("#2F3B26").text("Shakti Sena", { align: "left" });
-    doc.fontSize(10).fillColor("#555").text("Lucknow, Uttar Pradesh · info@shaktisena.org", { align: "left" });
-    doc.moveDown(1.2);
-    doc.moveTo(40, doc.y).lineTo(400, doc.y).strokeColor("#E8A33D").lineWidth(2).stroke();
+    doc.fontSize(16).fillColor("#163B66").text("MERE VATAN WELFARE FOUNDATION", { align: "left" });
+    doc.fontSize(9).fillColor("#475569").text("Betul, Madhya Pradesh · Ph: +91 9797633077 · Email: raghuwanshiashok34@gmail.com", { align: "left" });
+    doc.fontSize(8).fillColor("#D97706").text("Govt. Darpan Reg # RJ/2024/0488921 · Section 80G & 12A Tax Exempted", { align: "left" });
+    doc.moveDown(0.8);
+    doc.moveTo(40, doc.y).lineTo(400, doc.y).strokeColor("#D97706").lineWidth(2).stroke();
     doc.moveDown(1);
 
     doc.fontSize(14).fillColor("#1C1B18").text("Donation Receipt", { underline: false });
