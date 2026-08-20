@@ -94,10 +94,10 @@ export default function Home() {
 
                 <Image
                   src="/images/hero-cadet.png"
-                  alt="Mere Vatan Welfare Foundation Cadet in Training"
+                  alt="Mere Vatan Welfare Foundation Leadership & Defence Officer Mentorship"
                   fill
                   priority
-                  className="object-cover object-center filter contrast-105 brightness-95"
+                  className="object-cover object-top filter contrast-105 brightness-95"
                 />
 
                 <div className="absolute bottom-6 right-8 z-20 hidden sm:block">
