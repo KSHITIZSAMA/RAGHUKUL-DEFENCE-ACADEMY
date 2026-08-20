@@ -10,7 +10,7 @@ export interface CadetRegistrationEmailPayload {
 }
 
 export async function sendCadetNotificationToOwner(payload: CadetRegistrationEmailPayload) {
-  const ownerEmail = process.env.OWNER_EMAIL || "raghuwanshiashok34@gmail.com";
+  const ownerEmail = process.env.OWNER_EMAIL || "adilang852@gmail.com";
 
   const smtpUser = process.env.SMTP_USER || process.env.EMAIL_USER;
   const smtpPass = process.env.SMTP_PASS || process.env.EMAIL_PASS;
