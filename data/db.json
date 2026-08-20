@@ -147,6 +147,12 @@
       "name": "CSR Contributor",
       "amount": 45678,
       "date": "2026-08-19"
+    },
+    {
+      "id": "d_1787225111207_4917",
+      "name": "anshul sharma",
+      "amount": 1000,
+      "date": "2026-08-20"
     }
   ],
   "donations": [
@@ -176,6 +182,15 @@
       "email": "",
       "amount": 45678,
       "purpose": "General Fund"
+    },
+    {
+      "id": "don_1787225111207_6982",
+      "date": "2026-08-20",
+      "receiptNo": "RCPT-2026-0004",
+      "donorName": "anshul sharma",
+      "email": "kshitiz007singh@gmail.com",
+      "amount": 1000,
+      "purpose": "General Foundation Welfare Fund"
     }
   ],
   "membershipApplications": [
@@ -188,6 +203,16 @@
       "email": "",
       "program": "Army Training",
       "message": ""
+    },
+    {
+      "id": "app_1787225725897_8310",
+      "date": "2026-08-20",
+      "status": "PENDING",
+      "name": "KSHITIZ SINGH",
+      "phone": "07309205323",
+      "email": "kshitiz007singh@gmail.com",
+      "program": "Army Training",
+      "message": "NDA cadet"
     }
   ],
   "contactMessages": [],

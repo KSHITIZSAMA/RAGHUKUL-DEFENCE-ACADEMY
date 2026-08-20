@@ -7,10 +7,13 @@ export default function DonatePage() {
   const [status, setStatus] = useState<"idle" | "loading" | "done" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState("");
 
+  const [downloadUrl, setDownloadUrl] = useState<string | null>(null);
+
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setStatus("loading");
     setErrorMsg("");
+    setDownloadUrl(null);
 
     const form = new FormData(e.currentTarget);
     const payload = {
@@ -36,13 +39,14 @@ export default function DonatePage() {
 
       const blob = await res.blob();
       const url = URL.createObjectURL(blob);
+      setDownloadUrl(url);
+
       const a = document.createElement("a");
       a.href = url;
-      a.download = `Mere_Vatan_Donation_Receipt.pdf`;
+      a.download = `Mere_Vatan_Donation_Receipt_${Date.now()}.pdf`;
       document.body.appendChild(a);
       a.click();
       a.remove();
-      URL.revokeObjectURL(url);
 
       setStatus("done");
       e.currentTarget.reset();
@@ -214,9 +218,24 @@ export default function DonatePage() {
               )}
 
               {status === "done" && (
-                <div className="p-4 bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-mono rounded-xl flex items-center gap-2">
-                  <span className="text-lg">✔</span>
-                  <span>Thank you! Your official PDF donation receipt has been generated and downloaded automatically.</span>
+                <div className="p-5 bg-emerald-50 border border-emerald-300 text-emerald-900 text-xs font-mono rounded-2xl space-y-3 shadow-md">
+                  <div className="flex items-center gap-2 font-bold text-sm">
+                    <span className="text-xl">✔</span>
+                    <span>Donation Recorded & Official Receipt Generated!</span>
+                  </div>
+                  <p className="text-emerald-700 leading-relaxed">
+                    Your official PDF donation receipt has been generated. If your automatic download did not start, click the button below to download it directly.
+                  </p>
+                  {downloadUrl && (
+                    <a
+                      href={downloadUrl}
+                      download="Mere_Vatan_Donation_Receipt.pdf"
+                      className="inline-flex items-center gap-2 px-5 py-3 bg-[#10B981] hover:bg-[#047857] text-white font-bold rounded-xl shadow transition-all uppercase tracking-wider"
+                    >
+                      <span>📥</span>
+                      <span>CLICK HERE TO DOWNLOAD RECEIPT (PDF)</span>
+                    </a>
+                  )}
                 </div>
               )}
 

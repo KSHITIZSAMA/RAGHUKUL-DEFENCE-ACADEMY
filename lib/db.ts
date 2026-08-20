@@ -59,13 +59,40 @@ export interface DbShape {
   objectives: string[];
 }
 
+let memoryDb: DbShape | null = null;
+
 function readDb(): DbShape {
-  const raw = fs.readFileSync(DB_PATH, "utf-8");
-  return JSON.parse(raw) as DbShape;
+  if (memoryDb) return memoryDb;
+  try {
+    const raw = fs.readFileSync(DB_PATH, "utf-8");
+    memoryDb = JSON.parse(raw) as DbShape;
+    return memoryDb;
+  } catch {
+    memoryDb = {
+      users: [],
+      members: [],
+      notices: [],
+      events: [],
+      gallery: [],
+      testimonials: [],
+      management: [],
+      donors: [],
+      donations: [],
+      membershipApplications: [],
+      contactMessages: [],
+      objectives: [],
+    };
+    return memoryDb;
+  }
 }
 
-function writeDb(db: DbShape) {
-  fs.writeFileSync(DB_PATH, JSON.stringify(db, null, 2), "utf-8");
+function writeDb(data: DbShape) {
+  memoryDb = data;
+  try {
+    fs.writeFileSync(DB_PATH, JSON.stringify(data, null, 2), "utf-8");
+  } catch (e) {
+    console.warn("Database write skipped on read-only filesystem:", e);
+  }
 }
 
 function newId(prefix: string) {
