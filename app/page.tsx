@@ -309,12 +309,12 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             
-            {/* Card 1: Army Training */}
-            <div className="bg-white p-8 rounded-3xl shadow-xl border-t-8 border-[#163B66] flex flex-col justify-between group border-x border-b border-gray-200 card-hover-3d shimmer-card">
+            {/* Card 1: Army Training (Saffron / Orange - Top Flag Color) */}
+            <div className="bg-white p-8 rounded-3xl shadow-xl border-t-8 border-[#D97706] flex flex-col justify-between group border-x border-b border-gray-200 card-hover-3d shimmer-card">
               <div>
                 <div className="flex items-center justify-between font-mono text-xs text-[#64748B] mb-4">
                   <span>WING // 01</span>
-                  <span className="px-3 py-1 bg-[#163B66] text-[#FF9933] text-[10px] uppercase font-bold rounded-full shadow-sm">DEFENCE</span>
+                  <span className="px-3 py-1 bg-[#D97706] text-white text-[10px] uppercase font-bold rounded-full shadow-sm">DEFENCE</span>
                 </div>
                 <h3 className="text-2xl font-extrabold uppercase mb-3 tracking-wide text-[#163B66] font-display group-hover:text-[#D97706] transition-colors">
                   ARMY TRAINING
@@ -331,21 +331,21 @@ export default function Home() {
                 </div>
                 <ScrollButton
                   targetId="army-training"
-                  className="w-full py-3.5 bg-[#163B66] hover:bg-[#0D223A] text-white text-center font-mono text-xs font-bold uppercase tracking-wider transition-all rounded-xl shadow-md border-b-4 border-[#0D223A] group-hover:border-[#D97706]"
+                  className="w-full py-3.5 bg-[#D97706] hover:bg-[#B45309] text-white text-center font-mono text-xs font-bold uppercase tracking-wider transition-all rounded-xl shadow-md border-b-4 border-[#B45309]"
                 >
                   VIEW WING DETAILS ↓
                 </ScrollButton>
               </div>
             </div>
 
-            {/* Card 2: Women Empowerment */}
-            <div className="bg-white p-8 rounded-3xl shadow-xl border-t-8 border-[#D97706] flex flex-col justify-between group border-x border-b border-gray-200 card-hover-3d shimmer-card">
+            {/* Card 2: Women Empowerment (Navy Blue / White - Middle Flag Color) */}
+            <div className="bg-white p-8 rounded-3xl shadow-xl border-t-8 border-[#163B66] flex flex-col justify-between group border-x border-b border-gray-200 card-hover-3d shimmer-card">
               <div>
                 <div className="flex items-center justify-between font-mono text-xs text-[#64748B] mb-4">
                   <span>WING // 02</span>
-                  <span className="px-3 py-1 bg-[#D97706] text-white text-[10px] uppercase font-bold rounded-full shadow-sm">VOCATIONAL</span>
+                  <span className="px-3 py-1 bg-[#163B66] text-[#FF9933] text-[10px] uppercase font-bold rounded-full shadow-sm">VOCATIONAL</span>
                 </div>
-                <h3 className="text-2xl font-extrabold uppercase mb-3 tracking-wide text-[#163B66] font-display group-hover:text-[#D97706] transition-colors">
+                <h3 className="text-2xl font-extrabold uppercase mb-3 tracking-wide text-[#163B66] font-display group-hover:text-[#163B66] transition-colors">
                   WOMEN EMPOWERMENT
                 </h3>
                 <p className="text-xs text-[#475569] leading-relaxed mb-6 font-sans font-medium">
@@ -355,19 +355,19 @@ export default function Home() {
 
               <div>
                 <div className="bg-[#F8FAFC] p-4 text-xs font-mono mb-5 rounded-2xl border border-gray-200">
-                  <div className="text-[#D97706] font-bold">KEY FOCUS:</div>
+                  <div className="text-[#163B66] font-bold">KEY FOCUS:</div>
                   <div className="text-[#0F172A] font-bold">Self-Reliance & Skill Certificates</div>
                 </div>
                 <ScrollButton
                   targetId="women-empowerment"
-                  className="w-full py-3.5 bg-[#D97706] hover:bg-[#B45309] text-white text-center font-mono text-xs font-bold uppercase tracking-wider transition-all rounded-xl shadow-md border-b-4 border-[#B45309]"
+                  className="w-full py-3.5 bg-[#163B66] hover:bg-[#0D223A] text-white text-center font-mono text-xs font-bold uppercase tracking-wider transition-all rounded-xl shadow-md border-b-4 border-[#0D223A]"
                 >
                   VIEW WING DETAILS ↓
                 </ScrollButton>
               </div>
             </div>
 
-            {/* Card 3: Sports & Employment */}
+            {/* Card 3: Sports & Employment (India Green - Bottom Flag Color) */}
             <div className="bg-white p-8 rounded-3xl shadow-xl border-t-8 border-[#10B981] flex flex-col justify-between group border-x border-b border-gray-200 card-hover-3d shimmer-card">
               <div>
                 <div className="flex items-center justify-between font-mono text-xs text-[#64748B] mb-4">
@@ -404,11 +404,11 @@ export default function Home() {
       {/* ------------------------------------------------------------------------- */}
       {/* 4. DETAILED WING 01: ARMY TRAINING (id="army-training") */}
       {/* ------------------------------------------------------------------------- */}
-      <section id="army-training" className="py-20 bg-[#F4F6F9] border-b-2 border-[#163B66]/15 scroll-mt-24">
+      <section id="army-training" className="py-20 bg-transparent border-b-2 border-[#163B66]/15 scroll-mt-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           
-          <div className="inline-block px-3.5 py-1 bg-[#163B66]/15 text-[#163B66] font-mono text-xs font-bold tracking-widest uppercase rounded-lg mb-3">
-            // WING 01
+          <div className="inline-block px-3.5 py-1 bg-[#D97706]/15 text-[#B45309] font-mono text-xs font-bold tracking-widest uppercase rounded-lg mb-3">
+            // WING 01 (SAFFRON)
           </div>
           <h2 className="text-3xl sm:text-5xl font-black uppercase text-[#163B66] mb-4 font-display">
             ARMY TRAINING WING
@@ -423,29 +423,29 @@ export default function Home() {
               { title: "Written Exam Coaching", body: "General knowledge, reasoning and mathematics classes aligned to Army/Navy/Air Force entrance papers." },
               { title: "Interview & SSB Prep", body: "Mock interviews, group discussions and personality development sessions led by retired defence personnel." },
             ].map((c) => (
-              <div key={c.title} className="border-l-8 border-[#163B66] p-6 bg-white rounded-3xl shadow-md border-y border-r border-gray-200">
+              <div key={c.title} className="border-l-8 border-[#D97706] p-6 bg-white/90 backdrop-blur-sm rounded-3xl shadow-md border-y border-r border-gray-200">
                 <h3 className="text-xl font-bold uppercase font-display text-[#163B66] mb-2">{c.title}</h3>
                 <p className="text-xs font-sans text-[#475569] leading-relaxed font-medium">{c.body}</p>
               </div>
             ))}
           </div>
 
-          <div className="bg-[#163B66] text-white p-8 rounded-3xl shadow-2xl grid sm:grid-cols-3 gap-6 text-center border-t-8 border-[#D97706] border border-[#205493]">
-            <div>
-              <div className="text-4xl font-mono font-extrabold text-[#FF9933]">
-                <StatCounter end={340} suffix="+" />
-              </div>
-              <p className="text-xs font-mono text-gray-200 mt-1 uppercase font-bold">YOUTH TRAINED</p>
-            </div>
+          <div className="bg-[#D97706] text-white p-8 rounded-3xl shadow-2xl grid sm:grid-cols-3 gap-6 text-center border-t-8 border-[#163B66]">
             <div>
               <div className="text-4xl font-mono font-extrabold text-white">
-                <StatCounter end={58} />
+                <StatCounter end={340} suffix="+" />
               </div>
-              <p className="text-xs font-mono text-gray-200 mt-1 uppercase font-bold">RECRUITED SO FAR</p>
+              <p className="text-xs font-mono text-white/90 mt-1 uppercase font-bold">YOUTH TRAINED</p>
             </div>
             <div>
-              <div className="text-4xl font-mono font-extrabold text-[#FF9933]">12 WEEKS</div>
-              <p className="text-xs font-mono text-gray-200 mt-1 uppercase font-bold">PER TRAINING BATCH</p>
+              <div className="text-4xl font-mono font-extrabold text-[#163B66]">
+                <StatCounter end={58} />
+              </div>
+              <p className="text-xs font-mono text-white/90 mt-1 uppercase font-bold">RECRUITED SO FAR</p>
+            </div>
+            <div>
+              <div className="text-4xl font-mono font-extrabold text-white">12 WEEKS</div>
+              <p className="text-xs font-mono text-white/90 mt-1 uppercase font-bold">PER TRAINING BATCH</p>
             </div>
           </div>
 
@@ -458,8 +458,8 @@ export default function Home() {
       <section id="women-empowerment" className="py-20 bg-transparent border-b-2 border-[#163B66]/15 scroll-mt-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           
-          <div className="inline-block px-3.5 py-1 bg-[#D97706]/15 text-[#B45309] font-mono text-xs font-bold tracking-widest uppercase rounded-lg mb-3">
-            // WING 02
+          <div className="inline-block px-3.5 py-1 bg-[#163B66]/15 text-[#163B66] font-mono text-xs font-bold tracking-widest uppercase rounded-lg mb-3">
+            // WING 02 (NAVY BLUE)
           </div>
           <h2 className="text-3xl sm:text-5xl font-black uppercase text-[#163B66] mb-4 font-display">
             WOMEN EMPOWERMENT WING
@@ -474,29 +474,29 @@ export default function Home() {
               { title: "Beautician Course", body: "Skilling in skin care, hair styling, bridal makeup and salon management for self-employment." },
               { title: "Self-Defence & Health", body: "Basic martial-arts self-defence sessions paired with personal hygiene and health awareness." },
             ].map((c) => (
-              <div key={c.title} className="border-l-8 border-[#D97706] p-6 bg-white/90 backdrop-blur-sm rounded-3xl shadow-md border-y border-r border-gray-200">
+              <div key={c.title} className="border-l-8 border-[#163B66] p-6 bg-white/90 backdrop-blur-sm rounded-3xl shadow-md border-y border-r border-gray-200">
                 <h3 className="text-xl font-bold uppercase font-display text-[#163B66] mb-2">{c.title}</h3>
                 <p className="text-xs font-sans text-[#475569] leading-relaxed font-medium">{c.body}</p>
               </div>
             ))}
           </div>
 
-          <div className="bg-[#D97706] text-white p-8 rounded-3xl shadow-2xl grid sm:grid-cols-3 gap-6 text-center border-t-8 border-[#163B66]">
+          <div className="bg-[#163B66] text-white p-8 rounded-3xl shadow-2xl grid sm:grid-cols-3 gap-6 text-center border-t-8 border-[#D97706] border border-[#205493]">
             <div>
-              <div className="text-4xl font-mono font-extrabold text-white">
+              <div className="text-4xl font-mono font-extrabold text-[#FF9933]">
                 <StatCounter end={220} suffix="+" />
               </div>
-              <p className="text-xs font-mono text-white/90 mt-1 uppercase font-bold">WOMEN SKILLED</p>
+              <p className="text-xs font-mono text-gray-200 mt-1 uppercase font-bold">WOMEN SKILLED</p>
             </div>
             <div>
-              <div className="text-4xl font-mono font-extrabold text-[#163B66]">
+              <div className="text-4xl font-mono font-extrabold text-white">
                 <StatCounter end={45} suffix="+" />
               </div>
-              <p className="text-xs font-mono text-white/90 mt-1 uppercase font-bold">MICRO-ENTERPRISES STARTED</p>
+              <p className="text-xs font-mono text-gray-200 mt-1 uppercase font-bold">MICRO-ENTERPRISES STARTED</p>
             </div>
             <div>
-              <div className="text-4xl font-mono font-extrabold text-white">8 WEEKS</div>
-              <p className="text-xs font-mono text-white/90 mt-1 uppercase font-bold">COURSE DURATION</p>
+              <div className="text-4xl font-mono font-extrabold text-[#FF9933]">8 WEEKS</div>
+              <p className="text-xs font-mono text-gray-200 mt-1 uppercase font-bold">COURSE DURATION</p>
             </div>
           </div>
 
