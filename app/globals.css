@@ -177,3 +177,104 @@ h1, h2, h3, h4, .display {
     cursor: none !important;
   }
 }
+
+/* ==========================================================================
+   PREMIUM SEXY ANIMATIONS & HIGH-IMPACT VISUAL EFFECTS
+   ========================================================================== */
+
+/* 1. Shimmer Light Sweep Effect */
+@keyframes shimmer-sweep {
+  0% { transform: translateX(-150%) rotate(25deg); }
+  100% { transform: translateX(250%) rotate(25deg); }
+}
+
+.shimmer-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.28) 50%,
+    transparent 100%
+  );
+  transform: translateX(-150%) rotate(25deg);
+  pointer-events: none;
+  z-index: 10;
+  transition: transform 0.6s ease;
+}
+
+.shimmer-card:hover::before {
+  animation: shimmer-sweep 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* 2. Gentle Floating Motion */
+@keyframes float-gentle {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+.animate-float-gentle {
+  animation: float-gentle 5s ease-in-out infinite;
+}
+
+/* 3. Gold Aura Pulse */
+@keyframes aura-pulse-gold {
+  0%, 100% { box-shadow: 0 0 15px rgba(217, 119, 6, 0.2); }
+  50% { box-shadow: 0 0 35px rgba(217, 119, 6, 0.5); }
+}
+
+.animate-aura-gold {
+  animation: aura-pulse-gold 3s ease-in-out infinite;
+}
+
+/* 4. Dynamic 3D Card Elevation & Glow */
+.card-hover-3d {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, box-shadow;
+}
+
+.card-hover-3d:hover {
+  transform: translateY(-8px) scale(1.015);
+  box-shadow: 0 22px 45px -12px rgba(22, 59, 102, 0.22), 0 0 25px rgba(217, 119, 6, 0.15);
+  border-color: rgba(217, 119, 6, 0.6);
+}
+
+/* 5. Smooth Image Zoom & Polish */
+.img-zoom-wrapper {
+  overflow: hidden;
+}
+
+.img-zoom-wrapper img {
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1), filter 0.5s ease;
+}
+
+.img-zoom-wrapper:hover img {
+  transform: scale(1.08);
+  filter: contrast(1.08) brightness(1.05);
+}
+
+/* 6. Subtle Fade-In Slide Entrance */
+@keyframes fadeInSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-fadeInSlideUp {
+  animation: fadeInSlideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+

@@ -115,25 +115,23 @@ export default function CustomCursor() {
       {/* Outer Circle Component */}
       <div
         ref={circleRef}
-        className={`pointer-events-none fixed top-0 left-0 w-14 h-14 rounded-full border-2 transition-colors duration-200 ${
-          isClickableHovered
+        className={`pointer-events-none fixed top-0 left-0 w-14 h-14 rounded-full border-2 transition-colors duration-200 ${isClickableHovered
             ? "border-[#FF6600] bg-[#FF6600]/15 shadow-[0_0_22px_rgba(255,102,0,0.45)]"
             : isHeadingHovered
-            ? "border-[#D97706] bg-[#D97706]/15 shadow-[0_0_16px_rgba(217,119,6,0.3)]"
-            : "border-[#163B66]/80 bg-[#163B66]/5 shadow-[0_0_12px_rgba(22,59,102,0.15)]"
-        }`}
+              ? "border-[#D97706] bg-[#D97706]/15 shadow-[0_0_16px_rgba(217,119,6,0.3)]"
+              : "border-[#163B66]/80 bg-[#163B66]/5 shadow-[0_0_12px_rgba(22,59,102,0.15)]"
+          }`}
       />
 
       {/* Inner Ball Component - Mathematically Clamped Inside Circle */}
       <div
         ref={ballRef}
-        className={`pointer-events-none fixed top-0 left-0 w-4 h-4 rounded-full transition-all duration-200 ${
-          isClickableHovered
+        className={`pointer-events-none fixed top-0 left-0 w-4 h-4 rounded-full transition-all duration-200 ${isClickableHovered
             ? "bg-[#FF6600] filter blur-[0.5px] opacity-100 shadow-[0_0_16px_#FF6600]"
             : isHeadingHovered
-            ? "bg-[#D97706] filter blur-[0.5px] opacity-100 shadow-[0_0_14px_#D97706]"
-            : "bg-[#163B66] filter blur-[2px] backdrop-blur-sm opacity-90 shadow-[0_0_10px_#163B66]"
-        }`}
+              ? "bg-[#D97706] filter blur-[0.5px] opacity-100 shadow-[0_0_14px_#D97706]"
+              : "bg-[#163B66] filter blur-[2px] backdrop-blur-sm opacity-90 shadow-[0_0_10px_#163B66]"
+          }`}
       />
     </div>
   );

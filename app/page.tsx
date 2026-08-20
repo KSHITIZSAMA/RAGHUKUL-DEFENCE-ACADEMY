@@ -307,13 +307,13 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             
             {/* Card 1: Army Training */}
-            <div className="bg-white p-8 rounded-3xl shadow-xl border-t-8 border-[#163B66] flex flex-col justify-between group border-x border-b border-gray-200">
+            <div className="bg-white p-8 rounded-3xl shadow-xl border-t-8 border-[#163B66] flex flex-col justify-between group border-x border-b border-gray-200 card-hover-3d shimmer-card">
               <div>
                 <div className="flex items-center justify-between font-mono text-xs text-[#64748B] mb-4">
                   <span>WING // 01</span>
-                  <span className="px-3 py-1 bg-[#163B66] text-[#FF9933] text-[10px] uppercase font-bold rounded-full">DEFENCE</span>
+                  <span className="px-3 py-1 bg-[#163B66] text-[#FF9933] text-[10px] uppercase font-bold rounded-full shadow-sm">DEFENCE</span>
                 </div>
-                <h3 className="text-2xl font-extrabold uppercase mb-3 tracking-wide text-[#163B66] font-display">
+                <h3 className="text-2xl font-extrabold uppercase mb-3 tracking-wide text-[#163B66] font-display group-hover:text-[#D97706] transition-colors">
                   ARMY TRAINING
                 </h3>
                 <p className="text-xs text-[#475569] leading-relaxed mb-6 font-sans font-medium">
@@ -328,7 +328,7 @@ export default function Home() {
                 </div>
                 <ScrollButton
                   targetId="army-training"
-                  className="w-full py-3.5 bg-[#163B66] hover:bg-[#0D223A] text-white text-center font-mono text-xs font-bold uppercase tracking-wider transition-colors rounded-xl shadow-md border-b-4 border-[#0D223A]"
+                  className="w-full py-3.5 bg-[#163B66] hover:bg-[#0D223A] text-white text-center font-mono text-xs font-bold uppercase tracking-wider transition-all rounded-xl shadow-md border-b-4 border-[#0D223A] group-hover:border-[#D97706]"
                 >
                   VIEW WING DETAILS ↓
                 </ScrollButton>
@@ -336,13 +336,13 @@ export default function Home() {
             </div>
 
             {/* Card 2: Women Empowerment */}
-            <div className="bg-white p-8 rounded-3xl shadow-xl border-t-8 border-[#D97706] flex flex-col justify-between group border-x border-b border-gray-200">
+            <div className="bg-white p-8 rounded-3xl shadow-xl border-t-8 border-[#D97706] flex flex-col justify-between group border-x border-b border-gray-200 card-hover-3d shimmer-card">
               <div>
                 <div className="flex items-center justify-between font-mono text-xs text-[#64748B] mb-4">
                   <span>WING // 02</span>
-                  <span className="px-3 py-1 bg-[#D97706] text-white text-[10px] uppercase font-bold rounded-full">VOCATIONAL</span>
+                  <span className="px-3 py-1 bg-[#D97706] text-white text-[10px] uppercase font-bold rounded-full shadow-sm">VOCATIONAL</span>
                 </div>
-                <h3 className="text-2xl font-extrabold uppercase mb-3 tracking-wide text-[#163B66] font-display">
+                <h3 className="text-2xl font-extrabold uppercase mb-3 tracking-wide text-[#163B66] font-display group-hover:text-[#D97706] transition-colors">
                   WOMEN EMPOWERMENT
                 </h3>
                 <p className="text-xs text-[#475569] leading-relaxed mb-6 font-sans font-medium">
@@ -357,36 +357,36 @@ export default function Home() {
                 </div>
                 <ScrollButton
                   targetId="women-empowerment"
-                  className="w-full py-3.5 bg-[#D97706] hover:bg-[#B45309] text-white text-center font-mono text-xs font-bold uppercase tracking-wider transition-colors rounded-xl shadow-md border-b-4 border-[#B45309]"
+                  className="w-full py-3.5 bg-[#D97706] hover:bg-[#B45309] text-white text-center font-mono text-xs font-bold uppercase tracking-wider transition-all rounded-xl shadow-md border-b-4 border-[#B45309]"
                 >
                   VIEW WING DETAILS ↓
                 </ScrollButton>
               </div>
             </div>
 
-            {/* Card 3: Sports & Fitness */}
-            <div className="bg-white p-8 rounded-3xl shadow-xl border-t-8 border-[#10B981] flex flex-col justify-between group border-x border-b border-gray-200">
+            {/* Card 3: Sports & Employment */}
+            <div className="bg-white p-8 rounded-3xl shadow-xl border-t-8 border-[#10B981] flex flex-col justify-between group border-x border-b border-gray-200 card-hover-3d shimmer-card">
               <div>
                 <div className="flex items-center justify-between font-mono text-xs text-[#64748B] mb-4">
                   <span>WING // 03</span>
-                  <span className="px-3 py-1 bg-[#10B981] text-white text-[10px] uppercase font-bold rounded-full">ATHLETICS</span>
+                  <span className="px-3 py-1 bg-[#10B981] text-white text-[10px] uppercase font-bold rounded-full shadow-sm">ATHLETICS</span>
                 </div>
-                <h3 className="text-2xl font-extrabold uppercase mb-3 tracking-wide text-[#163B66] font-display">
-                  SPORTS & FITNESS
+                <h3 className="text-2xl font-extrabold uppercase mb-3 tracking-wide text-[#163B66] font-display group-hover:text-[#10B981] transition-colors">
+                  SPORTS & EMPLOYMENT
                 </h3>
                 <p className="text-xs text-[#475569] leading-relaxed mb-6 font-sans font-medium">
-                  Professional coaching, district-level recruitment trials, marathon training, and community wellness drives for youth and athletes.
+                  District tournaments, athletics coaching, Kabaddi championships, and job placement drives in security, logistics, and administration sectors.
                 </p>
               </div>
 
               <div>
                 <div className="bg-[#F8FAFC] p-4 text-xs font-mono mb-5 rounded-2xl border border-gray-200">
                   <div className="text-[#10B981] font-bold">KEY FOCUS:</div>
-                  <div className="text-[#0F172A] font-bold">District Trials & Athletic Excellence</div>
+                  <div className="text-[#0F172A] font-bold">Tournaments & Direct Job Placement</div>
                 </div>
                 <ScrollButton
                   targetId="sports-fitness"
-                  className="w-full py-3.5 bg-[#10B981] hover:bg-[#047857] text-white text-center font-mono text-xs font-bold uppercase tracking-wider transition-colors rounded-xl shadow-md border-b-4 border-[#047857]"
+                  className="w-full py-3.5 bg-[#10B981] hover:bg-[#047857] text-white text-center font-mono text-xs font-bold uppercase tracking-wider transition-all rounded-xl shadow-md border-b-4 border-[#047857]"
                 >
                   VIEW WING DETAILS ↓
                 </ScrollButton>

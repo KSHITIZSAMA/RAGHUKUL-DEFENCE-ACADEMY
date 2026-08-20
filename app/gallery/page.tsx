@@ -108,21 +108,21 @@ export default function GalleryArchivePage() {
       : ALL_PHOTOS.filter((photo) => photo.category === activeCategory);
 
   return (
-    <main className="min-h-screen bg-[#161912] text-white selection:bg-[#D97706] selection:text-black pt-28 pb-24">
+    <main className="min-h-screen bg-[#F4F6F9] text-[#0F172A] selection:bg-[#D97706] selection:text-white pt-28 pb-24">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         
         {/* Navigation Breadcrumb */}
-        <div className="mb-8">
+        <div className="mb-6">
           <Link
             href="/"
-            className="inline-flex items-center gap-2 text-xs font-mono tracking-widest text-[#738062] hover:text-[#D97706] transition-colors uppercase"
+            className="inline-flex items-center gap-2 text-xs font-mono tracking-widest text-[#64748B] hover:text-[#163B66] transition-colors uppercase font-bold"
           >
-            <span>←</span> Back to Foundation Home
+            <span>←</span> Back to Home Page
           </Link>
         </div>
 
         {/* Hero Header */}
-        <div className="relative border-l-4 border-[#D97706] pl-6 md:pl-10 py-4 mb-14 bg-[#163B66]/20 rounded-r-2xl border-t border-b border-r border-[#205493]/40">
+        <div className="bg-[#163B66] text-white p-8 md:p-12 rounded-3xl shadow-xl relative overflow-hidden mb-12 border-b-8 border-[#D97706]">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#D97706]/20 border border-[#D97706]/50 text-[#FF9933] font-mono text-[11px] font-bold tracking-widest uppercase mb-4">
             <span className="w-2 h-2 rounded-full bg-[#D97706] animate-ping" />
             Complete Photographic Archive
@@ -130,7 +130,7 @@ export default function GalleryArchivePage() {
           <h1 className="text-3xl md:text-5xl font-black font-display tracking-tight text-white mb-3 uppercase">
             Mere Vatan Photo & Activity Archive
           </h1>
-          <p className="text-[#CFD3C7] max-w-3xl text-sm md:text-base leading-relaxed font-sans">
+          <p className="text-gray-200 max-w-3xl text-sm md:text-base leading-relaxed font-sans">
             Explore the complete photographic record of our ground drills, athletic tournaments, tree plantation drives, women empowerment honors, and leadership conclaves.
           </p>
 
@@ -150,15 +150,15 @@ export default function GalleryArchivePage() {
         </div>
 
         {/* Category Filter Tabs */}
-        <div className="flex flex-wrap gap-2.5 sm:gap-3 mb-10 border-b border-[#205493]/50 pb-5">
+        <div className="flex flex-wrap gap-2.5 sm:gap-3 mb-10 border-b border-gray-200 pb-5">
           {CATEGORIES.map((cat) => (
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
               className={`px-5 py-2.5 text-xs font-mono font-bold tracking-wider uppercase transition-all rounded-xl ${
                 activeCategory === cat
-                  ? "bg-[#D97706] text-white shadow-lg border-b-2 border-white"
-                  : "bg-[#0D223A] text-[#CFD3C7] border border-[#205493] hover:bg-[#163B66] hover:text-white"
+                  ? "bg-[#163B66] text-white shadow-lg border-b-2 border-[#D97706]"
+                  : "bg-white text-[#334155] border border-gray-200 hover:bg-[#163B66] hover:text-white"
               }`}
             >
               {cat === "ALL ARCHIVE PHOTOS" ? "• SHOW ALL ARCHIVE" : cat}
@@ -172,43 +172,51 @@ export default function GalleryArchivePage() {
             <div
               key={photo.id}
               onClick={() => setActiveItem(photo)}
-              className="bg-[#0D223A] rounded-2xl overflow-hidden border border-[#205493] shadow-md group cursor-pointer hover:border-[#D97706] hover:shadow-2xl transition-all relative flex flex-col justify-between"
+              className="bg-white rounded-3xl overflow-hidden border border-[#163B66]/15 shadow-md group cursor-pointer hover:border-[#D97706] hover:shadow-2xl transition-all relative flex flex-col justify-between card-hover-3d shimmer-card"
             >
               {/* Image Container */}
-              <div className="relative h-64 w-full overflow-hidden bg-[#071526]">
+              <div className="relative h-64 w-full overflow-hidden bg-[#071526] img-zoom-wrapper">
                 <Image
                   src={photo.src}
                   alt={photo.caption}
                   fill
-                  className="object-cover object-center group-hover:scale-105 transition-transform duration-500 filter contrast-105"
+                  className="object-cover object-center filter contrast-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#071526]/80 via-transparent to-transparent opacity-70 group-hover:opacity-40 transition-opacity" />
-                
-                {/* Category Tag */}
-                <div className="absolute top-3 left-3 px-3 py-1 bg-[#163B66]/90 backdrop-blur-md text-[#FF9933] font-mono text-[10px] font-bold uppercase tracking-widest rounded-full border border-[#D97706]/40 shadow-md">
+                <div className="absolute inset-0 bg-gradient-to-t from-[#071526]/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
+
+                {/* Category Pill Tag */}
+                <div className="absolute top-3 left-3 px-3.5 py-1 bg-[#163B66]/90 backdrop-blur-md text-[#FF9933] font-mono text-[10px] font-bold uppercase tracking-widest rounded-full border border-[#D97706]/40 shadow-md">
                   {photo.category}
+                </div>
+
+                {/* Subtag Pill */}
+                <div className="absolute top-3 right-3 px-2.5 py-1 bg-[#D97706] text-white font-mono text-[9px] font-bold uppercase tracking-wider rounded-full shadow-md">
+                  {photo.tag}
                 </div>
               </div>
 
-              {/* Card Footer Details */}
-              <div className="p-5 bg-[#0D223A] flex-1 flex flex-col justify-between">
+              {/* Details */}
+              <div className="p-5 bg-white flex-1 flex flex-col justify-between">
                 <div>
-                  <div className="text-[10px] font-mono text-[#D97706] font-bold mb-1.5">
-                    {photo.batchDate}
+                  <div className="text-[10px] font-mono text-[#D97706] font-bold mb-1.5 flex items-center justify-between">
+                    <span>{photo.batchDate}</span>
+                    <span className="text-[#10B981] text-[9px] font-bold uppercase bg-[#10B981]/15 px-2 py-0.5 rounded-full">GROUND RECORD</span>
                   </div>
-                  <h3 className="text-sm font-bold uppercase font-mono text-white group-hover:text-[#FF9933] transition-colors leading-snug">
+                  <h3 className="text-sm font-bold uppercase font-mono text-[#0F172A] group-hover:text-[#163B66] transition-colors leading-snug">
                     {photo.caption}
                   </h3>
                 </div>
-                <div className="flex items-center justify-between mt-4 text-[11px] font-mono text-[#CFD3C7] pt-3 border-t border-[#205493]/60">
+                <div className="flex items-center justify-between mt-4 text-[11px] font-mono text-[#64748B] pt-3 border-t border-gray-100">
                   <span>📍 {photo.location}</span>
-                  <span className="text-[#FF9933] font-bold hover:underline">[ PREVIEW ]</span>
+                  <span className="text-[#D97706] font-bold group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
+                    <span>[ PREVIEW ]</span>
+                    <span>→</span>
+                  </span>
                 </div>
               </div>
             </div>
           ))}
         </div>
-
       </div>
 
       {/* Lightbox Preview Modal */}
