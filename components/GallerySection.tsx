@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 interface GalleryItem {
   id: string;
@@ -148,6 +149,20 @@ export default function GallerySection() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* View Full Archive Button */}
+        <div className="mt-12 text-center flex flex-col items-center justify-center">
+          <Link
+            href="/gallery"
+            className="inline-flex items-center gap-3 px-8 py-4 bg-[#163B66] text-white font-mono text-xs font-bold tracking-widest uppercase hover:bg-[#0D223A] transition-all rounded-xl shadow-lg border-b-4 border-[#D97706] group"
+          >
+            <span>EXPLORE FULL NGO PHOTO ARCHIVE</span>
+            <span className="text-[#FF9933] group-hover:translate-x-1 transition-transform">→</span>
+          </Link>
+          <p className="text-[11px] font-mono text-[#64748B] mt-2.5 uppercase font-semibold">
+            • View all ground drill photos, tree plantation drives & trophy award presentations
+          </p>
         </div>
 
       </div>
