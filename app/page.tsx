@@ -310,7 +310,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             
             {/* Card 1: Army Training (Saffron / Orange - Top Flag Color) */}
-            <div className="bg-white p-8 rounded-3xl shadow-xl border-t-8 border-[#D97706] flex flex-col justify-between group border-x border-b border-gray-200 card-hover-3d shimmer-card">
+            <div className="bg-white p-8 rounded-3xl shadow-xl border-t-8 border-[#D97706] flex flex-col justify-between group border-x border-b border-gray-200 card-hover-saffron shimmer-card">
               <div>
                 <div className="flex items-center justify-between font-mono text-xs text-[#64748B] mb-4">
                   <span>WING // 01</span>
@@ -339,7 +339,7 @@ export default function Home() {
             </div>
 
             {/* Card 2: Women Empowerment (Navy Blue / White - Middle Flag Color) */}
-            <div className="bg-white p-8 rounded-3xl shadow-xl border-t-8 border-[#163B66] flex flex-col justify-between group border-x border-b border-gray-200 card-hover-3d shimmer-card">
+            <div className="bg-white p-8 rounded-3xl shadow-xl border-t-8 border-[#163B66] flex flex-col justify-between group border-x border-b border-gray-200 card-hover-navy shimmer-card">
               <div>
                 <div className="flex items-center justify-between font-mono text-xs text-[#64748B] mb-4">
                   <span>WING // 02</span>
@@ -368,7 +368,7 @@ export default function Home() {
             </div>
 
             {/* Card 3: Sports & Employment (India Green - Bottom Flag Color) */}
-            <div className="bg-white p-8 rounded-3xl shadow-xl border-t-8 border-[#10B981] flex flex-col justify-between group border-x border-b border-gray-200 card-hover-3d shimmer-card">
+            <div className="bg-white p-8 rounded-3xl shadow-xl border-t-8 border-[#10B981] flex flex-col justify-between group border-x border-b border-gray-200 card-hover-green shimmer-card">
               <div>
                 <div className="flex items-center justify-between font-mono text-xs text-[#64748B] mb-4">
                   <span>WING // 03</span>
