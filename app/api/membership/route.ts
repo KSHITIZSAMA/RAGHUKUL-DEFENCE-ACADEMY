@@ -19,15 +19,19 @@ export async function POST(req: Request) {
       message: message ? String(message).trim() : "",
     });
 
-    // Send instant cadet registration email notification to foundation owner
-    await sendCadetNotificationToOwner({
-      name: record.name,
-      phone: record.phone,
-      email: record.email,
-      program: record.program,
-      message: record.message,
-      date: record.date,
-    });
+    // Send instant cadet registration email notification to foundation owner (non-blocking)
+    try {
+      await sendCadetNotificationToOwner({
+        name: record.name,
+        phone: record.phone,
+        email: record.email,
+        program: record.program,
+        message: record.message,
+        date: record.date,
+      });
+    } catch (emailErr) {
+      console.warn("Cadet registration email dispatch warning:", emailErr);
+    }
 
     return NextResponse.json({ ok: true, application: record });
   } catch (err: unknown) {

@@ -9,10 +9,11 @@ export default function MembershipPage() {
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    const formEl = e.currentTarget;
     setStatus("loading");
     setErrorMsg("");
 
-    const form = new FormData(e.currentTarget);
+    const form = new FormData(formEl);
     const payload = {
       name: form.get("name"),
       phone: form.get("phone"),
@@ -34,9 +35,10 @@ export default function MembershipPage() {
         return;
       }
       setStatus("done");
-      e.currentTarget.reset();
-    } catch {
-      setErrorMsg("Network error. Please try again.");
+      formEl.reset();
+    } catch (err) {
+      console.error("Membership submission error:", err);
+      setErrorMsg("Submission error. Please check your connection and try again.");
       setStatus("error");
     }
   }
