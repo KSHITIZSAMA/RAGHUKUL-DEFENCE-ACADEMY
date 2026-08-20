@@ -180,7 +180,7 @@ export default function Home() {
       {/* ------------------------------------------------------------------------- */}
       {/* 2. ABOUT SECTION (id="about") — Mission Yuva Shakti, Leadership & Objectives */}
       {/* ------------------------------------------------------------------------- */}
-      <section id="about" className="py-20 border-b-2 border-[#163B66]/15 bg-[#F4F6F9] scroll-mt-24">
+      <section id="about" className="py-20 border-b-2 border-[#163B66]/15 bg-transparent scroll-mt-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-10">
@@ -452,7 +452,7 @@ export default function Home() {
       {/* ------------------------------------------------------------------------- */}
       {/* 5. DETAILED WING 02: WOMEN EMPOWERMENT (id="women-empowerment") */}
       {/* ------------------------------------------------------------------------- */}
-      <section id="women-empowerment" className="py-20 bg-[#F4F6F9] border-b-2 border-[#163B66]/15 scroll-mt-24">
+      <section id="women-empowerment" className="py-20 bg-transparent border-b-2 border-[#163B66]/15 scroll-mt-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           
           <div className="inline-block px-3.5 py-1 bg-[#D97706]/15 text-[#B45309] font-mono text-xs font-bold tracking-widest uppercase rounded-lg mb-3">
@@ -471,7 +471,7 @@ export default function Home() {
               { title: "Beautician Course", body: "Skilling in skin care, hair styling, bridal makeup and salon management for self-employment." },
               { title: "Self-Defence & Health", body: "Basic martial-arts self-defence sessions paired with personal hygiene and health awareness." },
             ].map((c) => (
-              <div key={c.title} className="border-l-8 border-[#D97706] p-6 bg-white rounded-3xl shadow-md border-y border-r border-gray-200">
+              <div key={c.title} className="border-l-8 border-[#D97706] p-6 bg-white/90 backdrop-blur-sm rounded-3xl shadow-md border-y border-r border-gray-200">
                 <h3 className="text-xl font-bold uppercase font-display text-[#163B66] mb-2">{c.title}</h3>
                 <p className="text-xs font-sans text-[#475569] leading-relaxed font-medium">{c.body}</p>
               </div>
@@ -503,7 +503,7 @@ export default function Home() {
       {/* ------------------------------------------------------------------------- */}
       {/* 6. DETAILED WING 03: SPORTS & FITNESS (id="sports-fitness") */}
       {/* ------------------------------------------------------------------------- */}
-      <section id="sports-fitness" className="py-20 bg-[#F4F6F9] border-b-2 border-[#163B66]/15 scroll-mt-24">
+      <section id="sports-fitness" className="py-20 bg-transparent border-b-2 border-[#163B66]/15 scroll-mt-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           
           <div className="inline-block px-3.5 py-1 bg-[#10B981]/15 text-[#047857] font-mono text-xs font-bold tracking-widest uppercase rounded-lg mb-3">
@@ -522,7 +522,7 @@ export default function Home() {
               { title: "District Trial Events", body: "Organizing competitive trial runs and physical assessment camps for state and district sports trials." },
               { title: "Community Fitness", body: "Open morning workout sessions and marathon fitness drives encouraging a healthy lifestyle." },
             ].map((c) => (
-              <div key={c.title} className="border-l-8 border-[#10B981] p-6 bg-white rounded-3xl shadow-md border-y border-r border-gray-200">
+              <div key={c.title} className="border-l-8 border-[#10B981] p-6 bg-white/90 backdrop-blur-sm rounded-3xl shadow-md border-y border-r border-gray-200">
                 <h3 className="text-xl font-bold uppercase font-display text-[#163B66] mb-2">{c.title}</h3>
                 <p className="text-xs font-sans text-[#475569] leading-relaxed font-medium">{c.body}</p>
               </div>
@@ -559,7 +559,7 @@ export default function Home() {
       {/* ------------------------------------------------------------------------- */}
       {/* 8. EVENTS SECTION (id="events") */}
       {/* ------------------------------------------------------------------------- */}
-      <section id="events" className="py-20 bg-[#F4F6F9] border-b-2 border-[#163B66]/15 scroll-mt-24">
+      <section id="events" className="py-20 bg-transparent border-b-2 border-[#163B66]/15 scroll-mt-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
@@ -578,7 +578,7 @@ export default function Home() {
 
           <div className="space-y-4">
             {upcomingEvents.map((e) => (
-              <div key={e.id} className="bg-white p-6 rounded-3xl border border-[#163B66]/15 shadow-md flex flex-col sm:flex-row items-start gap-6 hover:shadow-xl transition-all">
+              <div key={e.id} className="bg-white/90 backdrop-blur-sm p-6 rounded-3xl border border-[#163B66]/15 shadow-md flex flex-col sm:flex-row items-start gap-6 hover:shadow-xl transition-all">
                 <div className="bg-[#163B66] text-white p-4 text-center font-mono shrink-0 rounded-2xl w-24 border-b-4 border-[#D97706]">
                   <div className="text-3xl font-extrabold text-[#FF9933] leading-none">{new Date(e.date).getDate()}</div>
                   <div className="text-[11px] uppercase mt-1 text-gray-200 font-bold">
@@ -600,7 +600,7 @@ export default function Home() {
       {/* ------------------------------------------------------------------------- */}
       {/* 9. NOTICES & ANNOUNCEMENTS (id="notices") */}
       {/* ------------------------------------------------------------------------- */}
-      <section id="notices" className="py-20 bg-[#F4F6F9] border-b-2 border-[#163B66]/15 scroll-mt-24">
+      <section id="notices" className="py-20 bg-transparent border-b-2 border-[#163B66]/15 scroll-mt-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           
           <div className="flex items-center justify-between mb-8">
@@ -612,12 +612,12 @@ export default function Home() {
                 LATEST NOTICES & BULLETINS
               </h2>
             </div>
-            <span className="font-mono text-xs font-bold text-[#163B66] hidden sm:inline-block bg-white px-4 py-2 rounded-xl border border-gray-200 shadow-xs">[ ACTIVE BOARD ]</span>
+            <span className="font-mono text-xs font-bold text-[#163B66] hidden sm:inline-block bg-white/90 backdrop-blur-sm px-4 py-2 rounded-xl border border-gray-200 shadow-xs">[ ACTIVE BOARD ]</span>
           </div>
 
           <div className="grid sm:grid-cols-2 gap-6">
             {recentActivity.map((n) => (
-              <div key={n.id} className="bg-white p-6 rounded-3xl border border-[#163B66]/15 shadow-md hover:shadow-xl transition-all">
+              <div key={n.id} className="bg-white/90 backdrop-blur-sm p-6 rounded-3xl border border-[#163B66]/15 shadow-md hover:shadow-xl transition-all">
                 <div className="flex items-center justify-between font-mono text-xs text-[#64748B] mb-3">
                   <span className="px-3 py-1 bg-[#163B66] text-[#FF9933] font-bold rounded-full text-[10px]">NOTICE // {n.id}</span>
                   <span className="font-bold">{n.date}</span>
@@ -634,7 +634,7 @@ export default function Home() {
       {/* ------------------------------------------------------------------------- */}
       {/* 10. DONORS ROLL SECTION (id="donors") */}
       {/* ------------------------------------------------------------------------- */}
-      <section id="donors" className="py-20 bg-[#F4F6F9] border-b-2 border-[#163B66]/15 scroll-mt-24">
+      <section id="donors" className="py-20 bg-transparent border-b-2 border-[#163B66]/15 scroll-mt-24">
         <div className="mx-auto max-w-5xl px-4 sm:px-6">
           
           <div className="text-center mb-12">
@@ -649,7 +649,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="bg-white rounded-3xl overflow-hidden border border-[#163B66]/15 shadow-xl mb-8">
+          <div className="bg-white/90 backdrop-blur-sm rounded-3xl overflow-hidden border border-[#163B66]/15 shadow-xl mb-8">
             <table className="w-full text-xs font-mono">
               <thead className="bg-[#163B66] text-white">
                 <tr>
@@ -660,7 +660,7 @@ export default function Home() {
               </thead>
               <tbody className="divide-y divide-gray-100">
                 {sortedDonors.map((d, i) => (
-                  <tr key={d.id} className={i % 2 ? "bg-[#F8FAFC]" : "bg-white"}>
+                  <tr key={d.id} className={i % 2 ? "bg-[#F8FAFC]/80" : "bg-white/90"}>
                     <td className="px-6 py-4 font-bold text-[#163B66]">{d.name}</td>
                     <td className="px-6 py-4 text-[#D97706] font-bold">₹{d.amount.toLocaleString("en-IN")}</td>
                     <td className="px-6 py-4 text-[#64748B]">{d.date}</td>
@@ -682,7 +682,7 @@ export default function Home() {
       {/* ------------------------------------------------------------------------- */}
       {/* 11. CONTACT & HEADQUARTERS SECTION (id="contact") */}
       {/* ------------------------------------------------------------------------- */}
-      <section id="contact" className="py-20 bg-[#F4F6F9] scroll-mt-24">
+      <section id="contact" className="py-20 bg-transparent scroll-mt-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           
           <div className="mb-12">

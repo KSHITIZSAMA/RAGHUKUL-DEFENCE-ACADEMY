@@ -67,6 +67,14 @@ html {
 
 body {
   background-color: var(--tactical-bg);
+  background-image: 
+    radial-gradient(circle at 10% 10%, rgba(217, 119, 6, 0.05) 0%, transparent 40%),
+    radial-gradient(circle at 90% 30%, rgba(22, 59, 102, 0.06) 0%, transparent 45%),
+    radial-gradient(circle at 50% 65%, rgba(16, 185, 129, 0.04) 0%, transparent 50%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='800' viewBox='0 0 1200 800'%3E%3C!-- Majestic Himalayan Peak Silhouette --%3E%3Cpath fill='%23163B66' fill-opacity='0.04' d='M0 550 L120 420 L210 470 L320 310 L440 450 L560 220 L700 420 L840 180 L960 380 L1080 260 L1200 440 L1200 800 L0 800 Z'/%3E%3Cpath fill='%23163B66' fill-opacity='0.025' d='M0 590 L160 480 L280 530 L450 340 L580 490 L750 280 L900 460 L1040 330 L1200 480 L1200 800 L0 800 Z'/%3E%3C!-- Floating Cloud Mist Layer --%3E%3Cpath fill='%23D97706' fill-opacity='0.015' d='M50 180 Q120 120 200 160 Q280 100 360 160 Q420 130 480 180 Z'/%3E%3Cpath fill='%23163B66' fill-opacity='0.02' d='M700 240 Q780 180 860 220 Q940 160 1020 220 Q1080 190 1140 240 Z'/%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
   color: var(--tactical-dark);
   font-family: var(--font-body);
   letter-spacing: -0.01em;
